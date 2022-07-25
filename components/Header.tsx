@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createStyles, Header, Container, Group, Burger } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
+import { useDisclosure } from '@mantine/hooks';
 import Image from 'next/image';
 
 const useStyles = createStyles((theme) => ({
@@ -55,7 +55,7 @@ interface HeaderSimpleProps {
 }
 
 export function HeaderSimple({ links }: HeaderSimpleProps) {
-    const [opened, toggleOpened] = useBooleanToggle(false);
+    const [opened, toggleOpened] = useDisclosure(false);
     const [active, setActive] = useState(links[0].link);
     const { classes, cx } = useStyles();
 
