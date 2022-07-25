@@ -17,6 +17,11 @@
     "test": "npm run prettier:check && npm run lint && npm run typecheck && npm run jest"
   },
   "dependencies": {
+    "@emotion/cache": "^11.9.3",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mantine/carousel": "^5.0.0",
     "@mantine/core": "5.0.0",
     "@mantine/dates": "5.0.0",
     "@mantine/hooks": "5.0.0",
