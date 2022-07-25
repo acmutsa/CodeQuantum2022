@@ -132,7 +132,6 @@ export function FooterLinks({ data }: FooterLinksProps) {
         <footer className={classes.footer}>
             <Container className={classes.inner}>
                 <div className={classes.logo}>
-                    <MantineLogo size={30} />
                     <Text size="xs" color="dimmed" className={classes.description}>
                         Build fully functional accessible web applications faster than ever
                     </Text>

@@ -1,4 +1,4 @@
-// import { MantineProvider, Container } from '@mantine/core';
+import { MantineProvider, Container } from '@mantine/core';
 // import { ReactChild, ReactFragment, ReactPortal } from 'react';
 //
 // export const Section => (
