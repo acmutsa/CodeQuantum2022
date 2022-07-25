@@ -134,13 +134,6 @@ export function FooterLinks({ data }: FooterLinksProps) {
         <footer className={classes.footer}>
             <Container className={classes.inner}>
                 <div className={classes.logo}>
-                    <Image
-                      priority
-                      src="/images/cq-logo.png"
-                      height={30}
-                      width={30}
-                      alt="CodeQuantum logo"
-                    />
                     <Text size="xs" color="dimmed" className={classes.description}>
                         Build fully functional accessible web applications faster than ever
                     </Text>
