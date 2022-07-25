@@ -67,6 +67,16 @@ const useStyles = createStyles((theme) => ({
         fontWeight: 800,
         lineHeight: 1.0,
         marginBottom: '1rem',
+
+        [theme.fn.smallerThan('sm')]: {
+            fontSize: '1.5rem',
+            lineHeight: 1.0,
+        },
+
+        [theme.fn.smallerThan('xs')]: {
+            fontSize: '1.25rem',
+            lineHeight: 1.0,
+        },
     },
 
     description: {

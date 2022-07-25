@@ -90,7 +90,7 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
 
                 <Burger
                   opened={opened}
-                  onClick={() => toggleOpened()}
+                  onClick={() => toggleOpened.toggle()}
                   className={classes.burger}
                   size="sm"
                 />
