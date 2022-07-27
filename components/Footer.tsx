@@ -146,7 +146,9 @@ export function FooterLinks({ data }: FooterLinksProps) {
                   {/*    TODO: see if CodeQuantum has a motto for this spot*/}
                   {/*</Text>*/}
               </div>
-              <div className={classes.groups}>{groups}</div>
+              <div className={classes.groups}>
+                  {groups}
+              </div>
           </Container>
           <Container className={classes.afterFooter}>
               <Text color="dimmed" size="sm">

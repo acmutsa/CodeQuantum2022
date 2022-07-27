@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStyles, Overlay, Container, Title, Button, Text, Grid } from '@mantine/core';
+import { createStyles, Overlay, Container, Title, Button, Text, Chip } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
     hero: {
@@ -50,8 +50,6 @@ const useStyles = createStyles((theme) => ({
         fontSize: 60,
         fontWeight: 900,
         lineHeight: 1.1,
-        variant: 'gradient',
-        gradient: { from: 'indigo', to: 'cyan', deg: 45 },
 
         [theme.fn.smallerThan('sm')]: {
             fontSize: 40,
@@ -131,15 +129,22 @@ export function HeroContentLeft() {
             {/*/>*/}
             <Container className={classes.outerContainer}>
                 <Container className={classes.container}>
-                    <Title className={classes.title} order={1}>CodeQuantum 2022</Title>
+                    <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit>
+                        <Title className={classes.title}>CodeQuantum 2022</Title>
+                    </Text>
+                    {/* eslint-disable-next-line max-len */}
                     <Title className={classes.subtitle} order={1}>November 5<sup>th</sup> - 6<sup>th</sup></Title>
                     <Text className={classes.description} size="xl" mt="xl">
-                        <Title className={classes.boldHeading}>What is CodeQuantum?</Title>
+                        <Title className={classes.boldHeading}>What is{' '}
+                            <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit>CodeQuantum</Text>?
+                        </Title>
                         CodeQuantum is San Antonio’s first 24-hour hackathon geared towards <a href="https://www.womenforpoliticalchange.org/appendix" rel="external">marginalized genders</a> to promote inclusivity and diversity! Organized by the ACM-W chapter at UTSA, CodeQuantum is dedicated to creating a safe hacking space for students in the tech field.
                     </Text>
-                    <Button variant="gradient" size="xl" radius="xl" className={classes.control}>
-                        Register
-                    </Button>
+
+                    {/*TODO: Implement registration button*/}
+                    {/*<Button variant="gradient" gradient={{ from: 'pink', to: 'violet' }} size="xl" radius="xl" className={classes.control}>*/}
+                    {/*    Register*/}
+                    {/*</Button>*/}
                 </Container>
                 <img src="/images/placeholder.jpg" alt="Person at computer" className={classes.image} />
             </Container>

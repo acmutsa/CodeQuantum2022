@@ -1,11 +1,9 @@
 import {
-  ThemeIcon,
   Text,
   Title,
   Center,
   Container,
   SimpleGrid,
-  useMantineTheme,
   createStyles,
 } from '@mantine/core';
 
@@ -82,7 +80,9 @@ export function FeaturesGrid({ data = sponsorList }: FeaturesGridProps) {
   return (
     <Container className={classes.wrapper}>
       <Center>
-        <Title className={classes.title}>Special thanks to our Partners:</Title>
+          <Title className={classes.title}>Special thanks to our{' '}
+            <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit>Partners</Text>
+          </Title>
       </Center>
       <SimpleGrid
         mt="3.5rem"
