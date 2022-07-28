@@ -1,7 +1,8 @@
 import { createStyles, Text, Container, ActionIcon, Group } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
-import Image from "next/image";
-import React from "react";
+import { IconBrandTwitter, IconBrandGithub, IconBrandInstagram } from '@tabler/icons';
+import Link from 'next/link';
+import Image from 'next/image';
+import React from 'react';
 
 const useStyles = createStyles((theme) => ({
     footer: {
@@ -10,7 +11,7 @@ const useStyles = createStyles((theme) => ({
         paddingBottom: theme.spacing.xl * 2,
         backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
         borderTop: `1px solid ${
-            theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
+          theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
         }`,
     },
 
@@ -84,7 +85,7 @@ const useStyles = createStyles((theme) => ({
         paddingTop: theme.spacing.xl,
         paddingBottom: theme.spacing.xl,
         borderTop: `1px solid ${
-            theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
+          theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
         }`,
 
         [theme.fn.smallerThan('sm')]: {
@@ -111,52 +112,67 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
     const groups = data.map((group) => {
         const links = group.links.map((link, index) => (
-            <Text<'a'>
-        key={index}
-        className={classes.link}
-        component="a"
-        href={link.link}
-        onClick={(event) => event.preventDefault()}
-    >
-        {link.label}
-    </Text>
-    ));
+          <Text<'a'>
+            key={index}
+            className={classes.link}
+            component="a"
+            href={link.link}
+            onClick={(event) => event.preventDefault()}
+          >
+              {link.label}
+          </Text>
+        ));
 
         return (
-            <div className={classes.wrapper} key={group.title}>
-                <Text className={classes.title}>{group.title}</Text>
-                {links}
-            </div>
+          <div className={classes.wrapper} key={group.title}>
+              <Text className={classes.title}>{group.title}</Text>
+              {links}
+          </div>
         );
     });
 
     return (
-        <footer className={classes.footer}>
-            <Container className={classes.inner}>
-                <div className={classes.logo}>
-                    <Text size="xs" color="dimmed" className={classes.description}>
-                        Build fully functional accessible web applications faster than ever
-                    </Text>
-                </div>
-                <div className={classes.groups}>{groups}</div>
-            </Container>
-            <Container className={classes.afterFooter}>
-                <Text color="dimmed" size="sm">
-                    © 2020 mantine.dev. All rights reserved.
-                </Text>
+      <footer className={classes.footer}>
+          <Container className={classes.inner}>
+              <div className={classes.logo}>
+                  <Image
+                    priority
+                    src="/images/cq-logo.png"
+                    height={75}
+                    width={75}
+                    alt="CodeQuantum logo"
+                  />
+                  {/*<Text size="xs" color="dimmed" className={classes.description}>*/}
+                  {/*    TODO: see if CodeQuantum has a motto for this spot*/}
+                  {/*</Text>*/}
+              </div>
+              <div className={classes.groups}>
+                  {groups}
+              </div>
+          </Container>
+          <Container className={classes.afterFooter}>
+              <Text color="dimmed" size="sm">
+                  © 2022 CodeQuantum // Designed with ♥ by the CodeQuantum Team
+              </Text>
 
-                <Group spacing={0} className={classes.social} position="right" noWrap>
-                    <ActionIcon size="lg">
-                        <IconBrandTwitter size={18} stroke={1.5} />
-                    </ActionIcon>
-                    <ActionIcon size="lg">
-                        <IconBrandYoutube size={18} stroke={1.5} />
-                    </ActionIcon>
-                    <ActionIcon size="lg">
-                        <IconBrandInstagram size={18} stroke={1.5} />
-                    </ActionIcon>
-                </Group>
-            </Container>
-        </footer>
+              <Group spacing={0} className={classes.social} position="right" noWrap>
+                  <ActionIcon size="lg">
+                      <Link href="https://twitter.com/codequantum22">
+                          <a><IconBrandTwitter size={30} stroke={1.5} /></a>
+                      </Link>
+                  </ActionIcon>
+                  <ActionIcon size="lg">
+                      <Link href="https://www.instagram.com/codequantum22/">
+                          <a><IconBrandInstagram size={30} stroke={1.5} /></a>
+                      </Link>
+                  </ActionIcon>
+                  <ActionIcon size="lg">
+                      <Link href="https://github.com/UTSA-ACM/CodeQuantum2022">
+                          <a><IconBrandGithub size={30} stroke={1.5} /></a>
+                      </Link>
+                  </ActionIcon>
+              </Group>
+          </Container>
+      </footer>
     );
 }
