@@ -4,21 +4,21 @@ import { createStyles, Overlay, Container, Title, Button, Text, Chip } from '@ma
 const useStyles = createStyles((theme) => ({
     hero: {
         position: 'relative',
-        // backgroundImage:
-        //     'url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)',
+        // backgroundImage: 'url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     },
 
     outerContainer: {
         height: 700,
-        maxWidth: '90%',
-        minWidth: 1300,
         paddingRight: '5rem',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'center',
+        [`@media (min-width: ${theme.breakpoints.xl}px)`]: {
+            maxWidth: 1500
+        },
     },
 
     container: {
@@ -141,7 +141,7 @@ export function HeroContentLeft() {
                         CodeQuantum is San Antonio’s first 24-hour hackathon geared towards <a href="https://www.womenforpoliticalchange.org/appendix" rel="external">marginalized genders</a> to promote inclusivity and diversity! Organized by the ACM-W chapter at UTSA, CodeQuantum is dedicated to creating a safe hacking space for students in the tech field.
                     </Text>
 
-                    {/*TODO: Implement registration button*/}
+                    {/* TODO: Implement registration button */}
                     {/*<Button variant="gradient" gradient={{ from: 'pink', to: 'violet' }} size="xl" radius="xl" className={classes.control}>*/}
                     {/*    Register*/}
                     {/*</Button>*/}
