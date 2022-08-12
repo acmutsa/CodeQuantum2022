@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { createStyles, Header, Container, Group, Burger } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import { createStyles, Header, Container, Group, Modal } from '@mantine/core';
+import { IconMenu2 } from '@tabler/icons';
 import Image from 'next/image';
 
 const useStyles = createStyles((theme) => ({
@@ -22,6 +22,7 @@ const useStyles = createStyles((theme) => ({
         [theme.fn.largerThan('sm')]: {
             display: 'none',
         },
+        width: '30px',
     },
 
     link: {
@@ -54,8 +55,24 @@ interface HeaderSimpleProps {
     links: { link: string; label: string }[];
 }
 
+function openModal() {
+    const [opened, toggleOpened] = useState(false);
+    return (
+        <>
+            <Modal
+              opened={opened}
+              onClose={() => toggleOpened(!opened)}
+              title="This is fullscreen modal!"
+              fullScreen
+            >
+                Yelloooooooooooooo
+            </Modal>
+        </>
+    );
+}
+
+// eslint-disable-next-line max-len
 export function HeaderSimple({ links }: HeaderSimpleProps) {
-    const [opened, toggleOpened] = useDisclosure(false);
     const [active, setActive] = useState(links[0].link);
     const { classes, cx } = useStyles();
 
@@ -88,9 +105,8 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
                     {items}
                 </Group>
 
-                <Burger
-                  opened={opened}
-                  onClick={() => toggleOpened.toggle()}
+                <IconMenu2
+                  onClick={() => openModal()}
                   className={classes.burger}
                   size="sm"
                 />
