@@ -25,10 +25,10 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
       </Head>
 
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-        <MantineProvider 
-          withGlobalStyles 
-          withNormalizeCSS 
-          theme={{ 
+        <MantineProvider
+          withGlobalStyles
+          withNormalizeCSS
+          theme={{
             colorScheme,
             breakpoints: {
               xs: 500,
