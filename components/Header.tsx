@@ -55,24 +55,8 @@ interface HeaderSimpleProps {
     links: { link: string; label: string }[];
 }
 
-function openModal() {
-    const [opened, toggleOpened] = useState(false);
-    return (
-        <>
-            <Modal
-              opened={opened}
-              onClose={() => toggleOpened(!opened)}
-              title="This is fullscreen modal!"
-              fullScreen
-            >
-                Yelloooooooooooooo
-            </Modal>
-        </>
-    );
-}
-
-// eslint-disable-next-line max-len
 export function HeaderSimple({ links }: HeaderSimpleProps) {
+    const [opened, toggleOpened] = useState(false);
     const [active, setActive] = useState(links[0].link);
     const { classes, cx } = useStyles();
 
@@ -106,11 +90,19 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
                 </Group>
 
                 <IconMenu2
-                  onClick={() => openModal()}
+                  onClick={() => toggleOpened(!opened)}
                   className={classes.burger}
                   size="sm"
                 />
             </Container>
+            <Modal
+              opened={opened}
+              onClose={() => toggleOpened(!opened)}
+              title="CodeQuantum 2022"
+              fullScreen
+            >
+                {items}
+            </Modal>
         </Header>
     );
 }
