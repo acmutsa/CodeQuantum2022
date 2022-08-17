@@ -181,6 +181,22 @@ export const useStyles = createStyles((theme) => ({
         },
     },
 
+    // ---- Section component ----
+
+    section: {
+        padding: theme.spacing.xl * 1.5,
+    },
+
+    sectionTitle: {
+        fontSize: 25,
+        underline: 'none',
+        fontWeight: 700,
+        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+        marginBottom: theme.spacing.xs / 2,
+        textAlign: 'center',
+        color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    },
+
     // ---- Sponsors component ----
 
     sponsorWrapper: {
