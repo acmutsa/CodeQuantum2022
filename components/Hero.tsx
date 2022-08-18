@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Title, Text } from '@mantine/core';
+import { Button, Container, Title, Text } from '@mantine/core';
 import { useStyles } from '../css/style';
 
 export function HeroContentLeft() {
@@ -14,11 +14,13 @@ export function HeroContentLeft() {
             {/*/>*/}
             <Container className={classes.outerContainer}>
                 <Container className={classes.container}>
-                    <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit>
-                        <Title className={classes.heroTitle}>CodeQuantum 2022</Title>
-                    </Text>
-                    {/* eslint-disable-next-line max-len */}
-                    <Title className={classes.subtitle} order={1}>November 5<sup>th</sup> - 6<sup>th</sup></Title>
+                    <div className={classes.center}>
+                        <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit>
+                            <Title className={classes.heroTitle}>CodeQuantum 2022</Title>
+                        </Text>
+                        {/* eslint-disable-next-line max-len */}
+                        <Title className={classes.subtitle} order={1}>November 5<sup>th</sup> - 6<sup>th</sup></Title>
+                    </div>
                     <Text className={classes.heroDescription} size="xl" mt="xl">
                         <Title className={classes.boldHeading}>What is{' '}
                             <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit>CodeQuantum</Text>?
@@ -27,9 +29,11 @@ export function HeroContentLeft() {
                     </Text>
 
                     {/* TODO: Implement registration button */}
-                    {/*<Button variant="gradient" gradient={{ from: 'pink', to: 'violet' }} size="xl" radius="xl" className={classes.control}>*/}
-                    {/*    Register*/}
-                    {/*</Button>*/}
+                    <div className={classes.center}>
+                        <Button variant="gradient" gradient={{ from: 'pink', to: 'violet' }} size="xl" radius="xl" className={classes.registerButton}>
+                            Register now!
+                        </Button>
+                    </div>
                 </Container>
                 <img src="/images/placeholder.jpg" alt="Person at computer" className={classes.image} />
             </Container>

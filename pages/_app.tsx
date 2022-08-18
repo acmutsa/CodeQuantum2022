@@ -37,7 +37,8 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
               lg: 1200,
               xl: 1400,
             },
-          }}>
+          }}
+        >
           <NotificationsProvider>
             <Component {...pageProps} />
           </NotificationsProvider>

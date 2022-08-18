@@ -39,7 +39,6 @@ export function FeaturesGrid({ data = Sponsors }: FeaturesGridProps) {
           </Title>
       </Center>
       <SimpleGrid
-        mt="3.5rem"
         cols={3}
         spacing={theme.spacing.xl * 0.25}
         breakpoints={[

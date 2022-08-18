@@ -65,7 +65,6 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
             <Modal
               opened={opened}
               onClose={() => toggleOpened(!opened)}
-              title="CodeQuantum 2022"
               fullScreen
             >
                 {modalItems}

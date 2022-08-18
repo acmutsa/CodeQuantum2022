@@ -33,24 +33,8 @@ export const navLinks = [
 // Sponsors
 export const sponsorList = [
     {
-        imagePath: '/images/sponsors/google-cloud.png',
-        altText: 'Google Cloud',
-    },
-    {
-        imagePath: '/images/sponsors/H-E-B.png',
-        altText: 'H-E-B',
-    },
-    {
-        imagePath: '/images/sponsors/jpmorgan-chase-logo.png',
-        altText: 'JPMorgan Chase',
-    },
-    {
-        imagePath: '/images/sponsors/matrix.png',
-        altText: 'Matrix',
-    },
-    {
-        imagePath: '/images/sponsors/paycom.png',
-        altText: 'Paycom',
+        imagePath: '/images/sponsors/dell.png',
+        altText: 'Dell',
     },
 ];
 
