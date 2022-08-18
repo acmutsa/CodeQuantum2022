@@ -15,7 +15,7 @@ export function HeroContentLeft() {
             <Container className={classes.outerContainer}>
                 <Container className={classes.container}>
                     <div className={classes.center}>
-                        <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit>
+                        <Text variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit>
                             <Title className={classes.heroTitle}>CodeQuantum 2022</Title>
                         </Text>
                         {/* eslint-disable-next-line max-len */}
