@@ -5,6 +5,7 @@ import { getCookie, setCookies } from 'cookies-next';
 import Head from 'next/head';
 import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
+import theme from '../data/mantineThemeOverride'
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -28,16 +29,8 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <MantineProvider
           withGlobalStyles
           withNormalizeCSS
-          theme={{
-            colorScheme,
-            breakpoints: {
-              xs: 500,
-              sm: 800,
-              md: 1000,
-              lg: 1200,
-              xl: 1400,
-            },
-          }}>
+          theme={theme}
+        >
           <NotificationsProvider>
             <Component {...pageProps} />
           </NotificationsProvider>

@@ -1,5 +1,13 @@
-// Header navigation
+// Temporary header navigation until all other pages are created
 export const navLinks = [
+    {
+        "link": "/",
+        "label": "Home"
+    },
+];
+
+// current mockup of future pages for navigation
+export const navLinksFUTURE = [
         {
             "link": "/",
             "label": "Home"
@@ -31,26 +39,20 @@ export const navLinks = [
 ];
 
 // Sponsors
+// ordered by their tiers of sponsorship
 export const sponsorList = [
     {
-        imagePath: '/images/sponsors/google-cloud.png',
-        altText: 'Google Cloud',
+        imagePath: '/images/sponsors/dell.png',
+        altText: 'Dell',
+    },
+    // ACM logos to remain at the end of the list
+    {
+        imagePath: '/images/sponsors/ACM_W_Logo.png',
+        altText: 'ACM-W at UTSA',
     },
     {
-        imagePath: '/images/sponsors/H-E-B.png',
-        altText: 'H-E-B',
-    },
-    {
-        imagePath: '/images/sponsors/jpmorgan-chase-logo.png',
-        altText: 'JPMorgan Chase',
-    },
-    {
-        imagePath: '/images/sponsors/matrix.png',
-        altText: 'Matrix',
-    },
-    {
-        imagePath: '/images/sponsors/paycom.png',
-        altText: 'Paycom',
+        imagePath: '/images/sponsors/ACM_logo_2019.png',
+        altText: 'ACM at UTSA',
     },
 ];
 

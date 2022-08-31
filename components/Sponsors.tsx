@@ -15,11 +15,9 @@ interface SponsorProps {
 
 export function Sponsor({ imagePath, altText } : SponsorProps) {
   return (
-    <div>
       <Center>
         <img src={imagePath} alt={altText} style={{ width: 200 }} />
       </Center>
-    </div>
   );
 }
 
@@ -35,11 +33,10 @@ export function FeaturesGrid({ data = Sponsors }: FeaturesGridProps) {
     <Container className={classes.sponsorWrapper}>
       <Center>
           <Title className={classes.sponsorTitle}>Special thanks to our{' '}
-            <Text component="span" variant="gradient" gradient={{ from: 'pink', to: 'violet' }} inherit>Partners</Text>
+            <Text component="span" variant="gradient" gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }} inherit>Partners</Text>
           </Title>
       </Center>
       <SimpleGrid
-        mt="3.5rem"
         cols={3}
         spacing={theme.spacing.xl * 0.25}
         breakpoints={[

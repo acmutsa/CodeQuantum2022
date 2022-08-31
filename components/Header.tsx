@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Header, Container, Group, Modal } from '@mantine/core';
+import { Header, Container, Group, Modal, useMantineTheme } from '@mantine/core';
 import { IconMenu2 } from '@tabler/icons';
 import Image from 'next/image';
 import { useStyles } from '../css/style';
+import theme from '../data/mantineThemeOverride';
 
 interface HeaderSimpleProps {
     links: { link: string; label: string }[];
@@ -12,12 +13,13 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
     const [opened, toggleOpened] = useState(false);
     const [active, setActive] = useState(links[0].link);
     const { classes, cx } = useStyles();
+    const theme = useMantineTheme(); 
 
     const items = links.map((link) => (
         <a
           key={link.label}
           href={link.link}
-          className={cx(classes.link, { [classes.linkActive]: active === link.link })}
+          className={cx(classes.navLink, { [classes.navLinkActive]: active === link.link })}
           onClick={(event) => {
                 event.preventDefault();
                 setActive(link.link);
@@ -31,7 +33,7 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
         <a
           key={link.label}
           href={link.link}
-          className={cx(classes.modalLink, { [classes.linkActive]: active === link.link })}
+          className={cx(classes.modalLink, { [classes.navLinkActive]: active === link.link })}
           onClick={() => {
               setActive(link.link);
           }}
@@ -41,7 +43,7 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
     ));
 
     return (
-        <Header height={75}>
+        <Header height={75} className={classes.headerbg}>
             <Container className={classes.header}>
                 <Image
                   priority
@@ -51,7 +53,7 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
                   alt="CodeQuantum logo"
                 />
 
-                <Group spacing={30} className={classes.links}>
+                <Group spacing={30} className={classes.navLinks}>
                     {items}
                 </Group>
 
@@ -65,8 +67,6 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
             <Modal
               opened={opened}
               onClose={() => toggleOpened(!opened)}
-              title="CodeQuantum 2022"
-              fullScreen
             >
                 {modalItems}
             </Modal>
