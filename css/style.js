@@ -363,6 +363,10 @@ export const useStyles = createStyles((theme) => ({
         },
     },
 
+    afterFooterText: {
+        color: theme.white,
+    },
+
     socials: {
         color: theme.white,
         [theme.fn.smallerThan('sm')]: {
@@ -375,5 +379,9 @@ export const useStyles = createStyles((theme) => ({
         '&:hover': {
             backgroundColor: theme.colors.cqorange[7],
         },
+    },
+
+    socialImages: {
+        color: theme.white,
     }
 }));
