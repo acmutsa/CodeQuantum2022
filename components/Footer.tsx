@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 import { useStyles } from '../css/style';
+import theme from '../data/mantineThemeOverride';
 
 interface FooterLinksProps {
     data: {
@@ -53,24 +54,24 @@ export function FooterLinks({ data }: FooterLinksProps) {
               </div>
           </Container>
           <Container className={classes.afterFooter}>
-              <Text color="dimmed" size="sm">
+              <Text color={theme.colors.white} size="sm">
                   © 2022 CodeQuantum // Designed with ♥ by the CodeQuantum Team
               </Text>
 
-              <Group spacing={0} className={classes.social} position="right" noWrap>
-                  <ActionIcon size="lg">
+              <Group spacing={0} className={classes.socials} position="right" noWrap>
+                  <ActionIcon size="lg"className={classes.socialItems} >
                       <Link href="https://twitter.com/codequantum22">
-                          <a><IconBrandTwitter size={30} stroke={1.5} /></a>
+                          <a><IconBrandTwitter size={30} stroke={1.5} color={theme.colors.white}/></a>
                       </Link>
                   </ActionIcon>
-                  <ActionIcon size="lg">
+                  <ActionIcon size="lg"className={classes.socialItems} >
                       <Link href="https://www.instagram.com/codequantum22/">
-                          <a><IconBrandInstagram size={30} stroke={1.5} /></a>
+                          <a><IconBrandInstagram size={30} stroke={1.5} color={theme.colors.white}/></a>
                       </Link>
                   </ActionIcon>
-                  <ActionIcon size="lg">
+                  <ActionIcon size="lg"className={classes.socialItems} >
                       <Link href="https://github.com/UTSA-ACM/CodeQuantum2022">
-                          <a><IconBrandGithub size={30} stroke={1.5} /></a>
+                          <a><IconBrandGithub size={30} stroke={1.5} color={theme.colors.white}/></a>
                       </Link>
                   </ActionIcon>
               </Group>

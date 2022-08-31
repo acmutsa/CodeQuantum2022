@@ -5,10 +5,27 @@ export const useStyles = createStyles((theme) => ({
     // ---- Page (global) ----
 
     page: {
-        backgroundColor: '#fff',
+        backgroundColor: theme.colors.cqgreen,
+    },
+
+    aLinks: {
+        '&, &:visited': {
+            color: theme.colors.cqorange[4],
+            textDecoration: 'none',
+    
+            '&:hover, &:active': {
+                color: theme.colors.cqyellow[4],
+                textDecoration: 'underline',
+            },
+        }
     },
 
     // ---- Header (Nav Bar) component ----
+
+    headerbg:{ 
+        backgroundColor: theme.colors.cqgreen[4],
+        borderBottom: `1px solid ${theme.colors.cqorange[4]}`,
+    },
 
     header: {
         display: 'flex',
@@ -16,35 +33,44 @@ export const useStyles = createStyles((theme) => ({
         alignItems: 'center',
         height: '100%',
         border: 'none',
-        backgroundColor: 'inherit',
     },
 
-    links: {
+    navLinks: {
         [theme.fn.smallerThan('sm')]: {
             display: 'none',
         },
     },
 
-    burger: {
-        [theme.fn.largerThan('sm')]: {
-            display: 'none',
-        },
-        width: '30px',
-    },
-
-    link: {
+    navLink: {
         display: 'block',
         lineHeight: 1,
         padding: '8px 12px',
         borderRadius: theme.radius.sm,
         textDecoration: 'none',
-        color: theme.colors.gray[7],
-        fontSize: theme.fontSizes.sm,
+        color: theme.white,
+        fontSize: theme.fontSizes.md,
+        lineHeight: theme.fontSizes.md * .12,
         fontWeight: 500,
 
         '&:hover': {
-            backgroundColor: theme.colors.gray[0],
+            backgroundColor: theme.colors.cqorange[7],
         },
+    },
+
+    navLinkActive: {
+        '&, &:hover': {
+            backgroundColor: theme.colors.cqorange[4],
+            color: theme.white,
+        },
+    },
+
+    burger: {
+        cursor: 'pointer',
+        color: theme.colors.cqorange[4],
+        [theme.fn.largerThan('sm')]: {
+            display: 'none',
+        },
+        width: '30px',
     },
 
     modalLink: {
@@ -53,19 +79,12 @@ export const useStyles = createStyles((theme) => ({
         padding: '8px 12px',
         borderRadius: theme.radius.sm,
         textDecoration: 'none',
-        color: theme.colors.gray[7],
+        color: theme.colors.cqorange[0],
         fontSize: theme.fontSizes.xl,
         fontWeight: 700,
 
         '&:hover': {
-            backgroundColor: theme.colors.gray[0],
-        },
-    },
-
-    linkActive: {
-        '&, &:hover': {
-            backgroundColor: theme.colors[theme.primaryColor][0],
-            color: theme.colors[theme.primaryColor][7],
+            backgroundColor: theme.colors.cqorange[7],
         },
     },
 
@@ -136,7 +155,6 @@ export const useStyles = createStyles((theme) => ({
     },
 
     heroTitle: {
-        color: theme.black,
         fontSize: 60,
         fontWeight: 900,
         lineHeight: 1.1,
@@ -154,7 +172,7 @@ export const useStyles = createStyles((theme) => ({
     },
 
     subtitle: {
-        color: theme.black,
+        color: theme.white,
         fontSize: 40,
         fontWeight: 700,
         lineHeight: 1.0,
@@ -172,7 +190,7 @@ export const useStyles = createStyles((theme) => ({
     },
 
     boldHeading: {
-        color: theme.black,
+        color: theme.white,
         fontSize: '1.75rem',
         fontWeight: 800,
         lineHeight: 1.0,
@@ -190,7 +208,7 @@ export const useStyles = createStyles((theme) => ({
     },
 
     heroDescription: {
-        color: theme.black,
+        color: theme.white,
         maxWidth: 600,
 
         [theme.fn.smallerThan('sm')]: {
@@ -212,6 +230,10 @@ export const useStyles = createStyles((theme) => ({
         paddingBottom: '1rem',
         width: '60%',
         marginTop: '2rem',
+
+        '&:hover': {
+            backgroundColor: theme.colors.cqgreen[4],
+        }
     },
 
     center: {
@@ -232,7 +254,7 @@ export const useStyles = createStyles((theme) => ({
         fontFamily: `Greycliff CF, ${theme.fontFamily}`,
         marginBottom: theme.spacing.xs / 2,
         textAlign: 'center',
-        color: theme.black
+        color: theme.white
     },
 
     // ---- Sponsors component ----
@@ -243,6 +265,7 @@ export const useStyles = createStyles((theme) => ({
     },
 
     sponsorTitle: {
+        color: theme.white,
         fontFamily: `Greycliff CF, ${theme.fontFamily}`,
         fontWeight: 800,
         marginBottom: theme.spacing.md,
@@ -250,7 +273,6 @@ export const useStyles = createStyles((theme) => ({
 
         [theme.fn.smallerThan('sm')]: {
             fontSize: 28,
-            textAlign: 'left',
         },
     },
 
@@ -260,8 +282,8 @@ export const useStyles = createStyles((theme) => ({
         marginTop: 120,
         paddingTop: theme.spacing.xl * 2,
         paddingBottom: theme.spacing.xl * 2,
-        backgroundColor: theme.colors.gray[0],
-        borderTop: `1px solid ${theme.colors.gray[2]}`,
+        backgroundColor: theme.colors.cqgreen[7],
+        borderTop: `1px solid ${theme.colors.cqorange[4]}`,
     },
 
     logo: {
@@ -276,7 +298,7 @@ export const useStyles = createStyles((theme) => ({
 
     description: {
         marginTop: 5,
-        color: theme.black,
+        color: theme.white,
 
         [theme.fn.smallerThan('sm')]: {
             marginTop: theme.spacing.xs,
@@ -309,7 +331,7 @@ export const useStyles = createStyles((theme) => ({
 
     footerLink: {
         display: 'block',
-        color: theme.colors.gray[6],
+        // color: theme.colors.gray[6],
         fontSize: theme.fontSizes.sm,
         paddingTop: 3,
         paddingBottom: 3,
@@ -324,7 +346,7 @@ export const useStyles = createStyles((theme) => ({
         fontWeight: 700,
         fontFamily: `Greycliff CF, ${theme.fontFamily}`,
         marginBottom: theme.spacing.xs / 2,
-        color: theme.black,
+        color: theme.white,
     },
 
     afterFooter: {
@@ -334,16 +356,24 @@ export const useStyles = createStyles((theme) => ({
         marginTop: theme.spacing.xl,
         paddingTop: theme.spacing.xl,
         paddingBottom: theme.spacing.xl,
-        borderTop: `1px solid ${theme.colors.gray[2]}`,
+        borderTop: `1px solid ${theme.colors.cqorange[4]}`,
 
         [theme.fn.smallerThan('sm')]: {
             flexDirection: 'column',
         },
     },
 
-    social: {
+    socials: {
+        color: theme.white,
         [theme.fn.smallerThan('sm')]: {
             marginTop: theme.spacing.xs,
         },
     },
+
+    socialItems: {
+        marginRight: '1rem',
+        '&:hover': {
+            backgroundColor: theme.colors.cqorange[7],
+        },
+    }
 }));

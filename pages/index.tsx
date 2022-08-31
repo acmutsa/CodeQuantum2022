@@ -2,8 +2,8 @@ import { HeaderSimple as Header } from '../components/Header';
 import { HeroContentLeft as Hero } from '../components/Hero';
 import { navLinks as HeaderLinks } from '../data/_data';
 import { FeaturesGrid as Sponsors } from '../components/Sponsors';
-// import { Section } from '../components/Section';
-// import { FooterLinks as Footer } from '../components/Footer';
+import { Section } from '../components/Section';
+import { FooterLinks as Footer } from '../components/Footer';
 import { useStyles } from '../css/style';
 
 export default function HomePage() {
@@ -13,6 +13,8 @@ export default function HomePage() {
         <div className={classes.page}>
             <Header links={HeaderLinks} />
             <Hero />
+            <Sponsors />
+            <Footer data={[]} />
             {/*<Section title={HeaderLinks[1].label} href={HeaderLinks[1].link}>*/}
             {/*    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor*/}
             {/*    /!* eslint-disable-next-line max-len *!/*/}
@@ -53,8 +55,6 @@ export default function HomePage() {
             {/*    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa*/}
             {/*    qui officia deserunt mollit anim id est laborum.*/}
             {/*</Section>*/}
-            <Sponsors />
-            {/*<Footer data={[]} />*/}
         </div>
     );
 }
