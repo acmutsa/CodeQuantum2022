@@ -1,5 +1,5 @@
 import { Text, Container, ActionIcon, Group } from '@mantine/core';
-import { IconBrandTwitter, IconBrandGithub, IconBrandInstagram } from '@tabler/icons';
+import { IconBrandTwitter, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons';
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
@@ -43,7 +43,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
               <div className={classes.logo}>
                   <Image
                     priority
-                    src="/images/cq-logo.png"
+                    src="/images/CQ_Logo_2022.svg"
                     height={75}
                     width={75}
                     alt="CodeQuantum logo"
@@ -60,13 +60,18 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
               <Group spacing={0} className={classes.socials} position="right" noWrap>
                   <ActionIcon size="lg" className={classes.socialItems}>
-                      <Link href="https://twitter.com/codequantum22">
+                      <Link href="https://twitter.com/CqHacks">
                           <a><IconBrandTwitter size={30} stroke={1.5} className={classes.socialImages}/></a>
                       </Link>
                   </ActionIcon>
                   <ActionIcon size="lg" className={classes.socialItems}>
-                      <Link href="https://www.instagram.com/codequantum22/">
+                      <Link href="https://www.instagram.com/cqhacks/">
                           <a><IconBrandInstagram size={30} stroke={1.5} className={classes.socialImages}/></a>
+                      </Link>
+                  </ActionIcon>
+                  <ActionIcon size="lg" className={classes.socialItems}>
+                      <Link href="https://www.linkedin.com/company/acmw-code-quantum/">
+                          <a><IconBrandLinkedin size={30} stroke={1.5} className={classes.socialImages}/></a>
                       </Link>
                   </ActionIcon>
                   <ActionIcon size="lg" className={classes.socialItems}>

@@ -24,12 +24,22 @@ export function HeroContentLeft() {
                     </Text>
 
                     <div className={classes.center}>
-                        <Button className={classes.registerButton} variant="gradient" gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }} size="xl" radius="xl">
+                        <Button 
+                            className={classes.registerButton} 
+                            component="a"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://rowdyhacks.typeform.com/codequantum"
+                            variant="gradient" 
+                            gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }} 
+                            size="xl" 
+                            radius="xl"
+                        >
                             Register now!
                         </Button>
                     </div>
                 </Container>
-                <img src="/images/placeholder.jpg" alt="Person at computer" className={classes.image} />
+                <img src="/images/undraw_hiking_re_k0bc.svg" alt="Person at computer" className={classes.image} />
             </Container>
         </div>
     );

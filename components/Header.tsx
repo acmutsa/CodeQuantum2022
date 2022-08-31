@@ -47,7 +47,7 @@ export function HeaderSimple({ links }: HeaderSimpleProps) {
             <Container className={classes.header}>
                 <Image
                   priority
-                  src="/images/cq-logo.png"
+                  src="/images/CQ_Logo_2022.svg"
                   height={50}
                   width={50}
                   alt="CodeQuantum logo"
