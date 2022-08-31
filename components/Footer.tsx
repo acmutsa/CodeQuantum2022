@@ -54,24 +54,24 @@ export function FooterLinks({ data }: FooterLinksProps) {
               </div>
           </Container>
           <Container className={classes.afterFooter}>
-              <Text color={theme.colors.white} size="sm">
+              <Text className={classes.afterFooterText} size="sm">
                   © 2022 CodeQuantum // Designed with ♥ by the CodeQuantum Team
               </Text>
 
               <Group spacing={0} className={classes.socials} position="right" noWrap>
-                  <ActionIcon size="lg"className={classes.socialItems} >
+                  <ActionIcon size="lg" className={classes.socialItems}>
                       <Link href="https://twitter.com/codequantum22">
-                          <a><IconBrandTwitter size={30} stroke={1.5} color={theme.colors.white}/></a>
+                          <a><IconBrandTwitter size={30} stroke={1.5} className={classes.socialImages}/></a>
                       </Link>
                   </ActionIcon>
-                  <ActionIcon size="lg"className={classes.socialItems} >
+                  <ActionIcon size="lg" className={classes.socialItems}>
                       <Link href="https://www.instagram.com/codequantum22/">
-                          <a><IconBrandInstagram size={30} stroke={1.5} color={theme.colors.white}/></a>
+                          <a><IconBrandInstagram size={30} stroke={1.5} className={classes.socialImages}/></a>
                       </Link>
                   </ActionIcon>
-                  <ActionIcon size="lg"className={classes.socialItems} >
+                  <ActionIcon size="lg" className={classes.socialItems}>
                       <Link href="https://github.com/UTSA-ACM/CodeQuantum2022">
-                          <a><IconBrandGithub size={30} stroke={1.5} color={theme.colors.white}/></a>
+                          <a><IconBrandGithub size={30} stroke={1.5} className={classes.socialImages}/></a>
                       </Link>
                   </ActionIcon>
               </Group>
