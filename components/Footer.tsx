@@ -1,103 +1,10 @@
-import { createStyles, Text, Container, ActionIcon, Group } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
-import Image from "next/image";
-import React from "react";
-
-const useStyles = createStyles((theme) => ({
-    footer: {
-        marginTop: 120,
-        paddingTop: theme.spacing.xl * 2,
-        paddingBottom: theme.spacing.xl * 2,
-        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-        borderTop: `1px solid ${
-            theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
-        }`,
-    },
-
-    logo: {
-        maxWidth: 200,
-
-        [theme.fn.smallerThan('sm')]: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-        },
-    },
-
-    description: {
-        marginTop: 5,
-
-        [theme.fn.smallerThan('sm')]: {
-            marginTop: theme.spacing.xs,
-            textAlign: 'center',
-        },
-    },
-
-    inner: {
-        display: 'flex',
-        justifyContent: 'space-between',
-
-        [theme.fn.smallerThan('sm')]: {
-            flexDirection: 'column',
-            alignItems: 'center',
-        },
-    },
-
-    groups: {
-        display: 'flex',
-        flexWrap: 'wrap',
-
-        [theme.fn.smallerThan('sm')]: {
-            display: 'none',
-        },
-    },
-
-    wrapper: {
-        width: 160,
-    },
-
-    link: {
-        display: 'block',
-        color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[6],
-        fontSize: theme.fontSizes.sm,
-        paddingTop: 3,
-        paddingBottom: 3,
-
-        '&:hover': {
-            textDecoration: 'underline',
-        },
-    },
-
-    title: {
-        fontSize: theme.fontSizes.lg,
-        fontWeight: 700,
-        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-        marginBottom: theme.spacing.xs / 2,
-        color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    },
-
-    afterFooter: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginTop: theme.spacing.xl,
-        paddingTop: theme.spacing.xl,
-        paddingBottom: theme.spacing.xl,
-        borderTop: `1px solid ${
-            theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
-        }`,
-
-        [theme.fn.smallerThan('sm')]: {
-            flexDirection: 'column',
-        },
-    },
-
-    social: {
-        [theme.fn.smallerThan('sm')]: {
-            marginTop: theme.spacing.xs,
-        },
-    },
-}));
+import { Text, Container, ActionIcon, Group } from '@mantine/core';
+import { IconBrandTwitter, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons';
+import Link from 'next/link';
+import Image from 'next/image';
+import React from 'react';
+import { useStyles } from '../css/style';
+import theme from '../data/mantineThemeOverride';
 
 interface FooterLinksProps {
     data: {
@@ -111,52 +18,69 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
     const groups = data.map((group) => {
         const links = group.links.map((link, index) => (
-            <Text<'a'>
-        key={index}
-        className={classes.link}
-        component="a"
-        href={link.link}
-        onClick={(event) => event.preventDefault()}
-    >
-        {link.label}
-    </Text>
-    ));
+          <Text<'a'>
+            key={index}
+            className={classes.footerLink}
+            component="a"
+            href={link.link}
+            onClick={(event) => event.preventDefault()}
+          >
+              {link.label}
+          </Text>
+        ));
 
         return (
-            <div className={classes.wrapper} key={group.title}>
-                <Text className={classes.title}>{group.title}</Text>
-                {links}
-            </div>
+          <div className={classes.wrapper} key={group.title}>
+              <Text className={classes.title}>{group.title}</Text>
+              {links}
+          </div>
         );
     });
 
     return (
-        <footer className={classes.footer}>
-            <Container className={classes.inner}>
-                <div className={classes.logo}>
-                    <Text size="xs" color="dimmed" className={classes.description}>
-                        Build fully functional accessible web applications faster than ever
-                    </Text>
-                </div>
-                <div className={classes.groups}>{groups}</div>
-            </Container>
-            <Container className={classes.afterFooter}>
-                <Text color="dimmed" size="sm">
-                    © 2020 mantine.dev. All rights reserved.
-                </Text>
+      <footer className={classes.footer}>
+          <Container className={classes.inner}>
+              <div className={classes.logo}>
+                  <Image
+                    priority
+                    src="/images/CQ_Logo_2022.svg"
+                    height={75}
+                    width={75}
+                    alt="CodeQuantum logo"
+                  />
+              </div>
+              <div className={classes.groups}>
+                  {groups}
+              </div>
+          </Container>
+          <Container className={classes.afterFooter}>
+              <Text className={classes.afterFooterText} size="sm">
+                  © 2022 CodeQuantum // Designed with ♥ by the CodeQuantum Team
+              </Text>
 
-                <Group spacing={0} className={classes.social} position="right" noWrap>
-                    <ActionIcon size="lg">
-                        <IconBrandTwitter size={18} stroke={1.5} />
-                    </ActionIcon>
-                    <ActionIcon size="lg">
-                        <IconBrandYoutube size={18} stroke={1.5} />
-                    </ActionIcon>
-                    <ActionIcon size="lg">
-                        <IconBrandInstagram size={18} stroke={1.5} />
-                    </ActionIcon>
-                </Group>
-            </Container>
-        </footer>
+              <Group spacing={0} className={classes.socials} position="right" noWrap>
+                  <ActionIcon size="lg" className={classes.socialItems}>
+                      <Link href="https://twitter.com/CqHacks">
+                          <a><IconBrandTwitter size={30} stroke={1.5} className={classes.socialImages}/></a>
+                      </Link>
+                  </ActionIcon>
+                  <ActionIcon size="lg" className={classes.socialItems}>
+                      <Link href="https://www.instagram.com/cqhacks/">
+                          <a><IconBrandInstagram size={30} stroke={1.5} className={classes.socialImages}/></a>
+                      </Link>
+                  </ActionIcon>
+                  <ActionIcon size="lg" className={classes.socialItems}>
+                      <Link href="https://www.linkedin.com/company/acmw-code-quantum/">
+                          <a><IconBrandLinkedin size={30} stroke={1.5} className={classes.socialImages}/></a>
+                      </Link>
+                  </ActionIcon>
+                  <ActionIcon size="lg" className={classes.socialItems}>
+                      <Link href="https://github.com/UTSA-ACM/CodeQuantum2022">
+                          <a><IconBrandGithub size={30} stroke={1.5} className={classes.socialImages}/></a>
+                      </Link>
+                  </ActionIcon>
+              </Group>
+          </Container>
+      </footer>
     );
 }
