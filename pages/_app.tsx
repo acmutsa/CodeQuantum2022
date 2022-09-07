@@ -1,8 +1,10 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider, createEmotionCache } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 import theme from '../data/mantineThemeOverride';
+
+const eCache = createEmotionCache({ key: 'mantine' });
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -28,7 +30,7 @@ export default function App(props: AppProps) {
         <meta name="author" content="Zaquariah Holland and Danielle Tobler" />
       </Head>
 
-      <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+      <MantineProvider withGlobalStyles withNormalizeCSS emotionCache={eCache} theme={theme}>
         <NotificationsProvider>
           <Component {...pageProps} />
         </NotificationsProvider>
