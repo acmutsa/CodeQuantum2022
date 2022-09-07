@@ -1,13 +1,21 @@
+import { GetServerSidePropsContext } from 'next';
+import { useState, useEffect } from 'react';
 import { AppProps } from 'next/app';
+import { getCookie, setCookies } from 'cookies-next';
 import Head from 'next/head';
-import { MantineProvider, createEmotionCache } from '@mantine/core';
+import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 import theme from '../data/mantineThemeOverride';
 
-const eCache = createEmotionCache({ key: 'mantine' });
-
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
+
+  const toggleColorScheme = (value?: ColorScheme) => {
+    const nextColorScheme = value || (colorScheme === 'dark' ? 'light' : 'dark');
+    setColorScheme(nextColorScheme);
+    setCookies('mantine-color-scheme', nextColorScheme, { maxAge: 60 * 60 * 24 * 30 });
+  };
 
   return (
     <>
@@ -30,11 +38,13 @@ export default function App(props: AppProps) {
         <meta name="author" content="Zaquariah Holland and Danielle Tobler" />
       </Head>
 
-      <MantineProvider withGlobalStyles withNormalizeCSS emotionCache={eCache} theme={theme}>
-        <NotificationsProvider>
-          <Component {...pageProps} />
-        </NotificationsProvider>
-      </MantineProvider>
+      <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+        <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+          <NotificationsProvider>
+            <Component {...pageProps} />
+          </NotificationsProvider>
+        </MantineProvider>
+      </ColorSchemeProvider>
     </>
   );
 }
