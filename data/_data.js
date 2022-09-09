@@ -1,5 +1,5 @@
 // Temporary header navigation until all other pages are created
-export const navLinks = [
+export const navLinksOLD = [
     {
         "link": "/",
         "label": "Home"
@@ -7,7 +7,7 @@ export const navLinks = [
 ];
 
 // current mockup of future pages for navigation
-export const navLinksFUTURE = [
+export const navLinks = [
         {
             "link": "/",
             "label": "Home"
@@ -38,7 +38,7 @@ export const navLinksFUTURE = [
         },
 ];
 
-// Sponsors
+// SPONSORS
 // ordered by their tiers of sponsorship
 export const sponsorList = [
     {

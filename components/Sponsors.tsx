@@ -1,6 +1,4 @@
 import {
-  Text,
-  Title,
   Center,
   Container,
   SimpleGrid,
@@ -31,11 +29,6 @@ export function FeaturesGrid({ data = Sponsors }: FeaturesGridProps) {
 
   return (
     <Container className={classes.sponsorWrapper}>
-      <Center>
-          <Title className={classes.sponsorTitle}>Special thanks to our{' '}
-            <Text component="span" variant="gradient" gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }} inherit>Partners</Text>
-          </Title>
-      </Center>
       <SimpleGrid
         cols={3}
         spacing={theme.spacing.xl * 0.25}

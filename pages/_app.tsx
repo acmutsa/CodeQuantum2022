@@ -23,7 +23,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <title>CodeQuantum 2022</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="shortcut icon" href="/images/CQ_Logo_2022.svg" />
-        <meta name="description" content="CodeQuantum is San Antonio’s first 24-hour hackathon geared towards marginalized genders to promote inclusivity and diversity!" />
+        <meta name="description" content="CodeQuantum is San Antonio's first 24-hour hackathon geared towards marginalized genders to promote inclusivity and diversity!" />
         <meta name="keywords" content="hackathon, coding, computer science, utsa, college, marginalized genders" />
         <meta name="robots" content="index, nofollow" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
