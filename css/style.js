@@ -35,10 +35,22 @@ export const useStyles = createStyles((theme) => ({
         border: 'none',
     },
 
+    navbar: {
+        [theme.fn.largerThan("sm")]: {
+          display: "none"
+        }
+    },
+
     navLinks: {
         [theme.fn.smallerThan('sm')]: {
             display: 'none',
         },
+    },
+
+    links: {
+      [theme.fn.smallerThan("sm")]: {
+        display: "none"
+      }
     },
 
     navLink: {
@@ -91,19 +103,19 @@ export const useStyles = createStyles((theme) => ({
     // ---- Hero component ----
 
     hero: {
-        marginTop: '4rem',
-        // position: 'relative',
-        // backgroundImage: 'url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)',
-        // backgroundSize: 'cover',
-        // backgroundPosition: 'center',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
-
+    
     outerContainer: {
         // height: 700,
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'center',
+        minHeight: 850,
 
         [theme.fn.smallerThan('md')]: {
             height: 'auto',
@@ -119,7 +131,6 @@ export const useStyles = createStyles((theme) => ({
         // height: 700,
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'flex-end',
         alignItems: 'flex-start',
         // paddingBottom: theme.spacing.xl * 6,
         zIndex: 1,
@@ -131,7 +142,7 @@ export const useStyles = createStyles((theme) => ({
             textAlign: 'center',
         },
         [theme.fn.largerThan('sm')]: {
-            paddingRight: theme.spacing.xl * 2,
+            paddingRight: theme.spacing.xl,
         },
     },
 
@@ -260,8 +271,8 @@ export const useStyles = createStyles((theme) => ({
     // ---- Sponsors component ----
 
     sponsorWrapper: {
-        paddingTop: theme.spacing.xl * 4,
-        paddingBottom: theme.spacing.xl * 4,
+        // paddingTop: theme.spacing.xl * 4,
+        // paddingBottom: theme.spacing.xl * 4,
     },
 
     sponsorTitle: {
@@ -279,7 +290,6 @@ export const useStyles = createStyles((theme) => ({
     // ---- Footer component ----
 
     footer: {
-        marginTop: 120,
         paddingTop: theme.spacing.xl * 2,
         paddingBottom: theme.spacing.xl * 2,
         backgroundColor: theme.colors.cqgreen[7],
