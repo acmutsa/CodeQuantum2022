@@ -1,52 +1,20 @@
-import { useState } from 'react';
-import { navLinks as HeaderLinks } from '../data/_data';
 import { Section } from '../components/Section';
-import { useStyles } from '../css/style';
-import {
-    AppShell,
-    Header,
-    Container,
-    Image,
-    MediaQuery,
-    Burger,
-    Group,
-    Modal
-} from '@mantine/core';
+import { createStyles, AppShell } from '@mantine/core';
 import {
     Hero,
     Sponsors,
     Footer,
-    CQHeader,
-    CQModal
+    CQHeader
 } from '../components';
-import Link from 'next/link';
+
+const useStyles = createStyles((theme) => ({
+    page: {
+        backgroundColor: theme.colors.cqgreen,
+    },
+}))
 
 export default function HomePage() {
-    const { classes, cx } = useStyles();
-    const [opened, setOpened] = useState(false);
-    const [active, setActive] = useState(HeaderLinks[0].link);
-
-    const items = HeaderLinks.map((link) => (
-        <Link
-            key={link.label} 
-            href={{
-            pathname: "/",
-            hash: `${link.link}`
-        }}>
-            <a className={cx(classes.navLink, { [classes.navLinkActive]: active === link.link })}>{link.label}</a>
-        </Link>
-    ));
-
-    const modalItems = HeaderLinks.map((link) => (
-        <Link 
-            key={link.label}
-            href={{
-            pathname: "/",
-            hash: `${link.link}`
-        }}>
-            <a className={cx(classes.modalLink, { [classes.navLinkActive]: active === link.link })}>{link.label}</a>
-        </Link>
-    ));
+    const { classes } = useStyles();
 
     return (
         <AppShell

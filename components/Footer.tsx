@@ -1,10 +1,117 @@
-import { Text, Container, ActionIcon, Group } from '@mantine/core';
+import { Text, Container, ActionIcon, Group, createStyles } from '@mantine/core';
 import { IconBrandTwitter, IconBrandGithub, IconBrandInstagram, IconBrandLinkedin } from '@tabler/icons';
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import { useStyles } from '../css/style';
-import theme from '../data/mantineThemeOverride';
+
+const useStyles = createStyles((theme) => ({
+    footerLink: {
+        display: 'block',
+        // color: theme.colors.gray[6],
+        fontSize: theme.fontSizes.sm,
+        paddingTop: 3,
+        paddingBottom: 3,
+
+        '&:hover': {
+            textDecoration: 'underline',
+        },
+    },
+
+    wrapper: {
+        width: 160,
+    },
+
+    title: {
+        fontSize: theme.fontSizes.lg,
+        fontWeight: 700,
+        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+        marginBottom: theme.spacing.xs / 2,
+        color: theme.white,
+    },
+
+    inner: {
+        display: 'flex',
+        justifyContent: 'space-between',
+
+        [theme.fn.smallerThan('sm')]: {
+            flexDirection: 'column',
+            alignItems: 'center',
+        },
+    },
+
+    footer: {
+        paddingTop: theme.spacing.xl * 2,
+        paddingBottom: theme.spacing.xl * 2,
+        backgroundColor: theme.colors.cqgreen[7],
+        borderTop: `1px solid ${theme.colors.cqorange[4]}`,
+    },
+
+    logo: {
+        maxWidth: 200,
+
+        [theme.fn.smallerThan('sm')]: {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+        },
+    },
+
+    // NOT CURRENTLY USED
+    description: {
+        marginTop: 5,
+        color: theme.white,
+
+        [theme.fn.smallerThan('sm')]: {
+            marginTop: theme.spacing.xs,
+            textAlign: 'center',
+        },
+    },
+
+    groups: {
+        display: 'flex',
+        flexWrap: 'wrap',
+
+        [theme.fn.smallerThan('sm')]: {
+            display: 'none',
+        },
+    },
+
+    afterFooter: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginTop: theme.spacing.xl,
+        paddingTop: theme.spacing.xl,
+        paddingBottom: theme.spacing.xl,
+        borderTop: `1px solid ${theme.colors.cqorange[4]}`,
+
+        [theme.fn.smallerThan('sm')]: {
+            flexDirection: 'column',
+        },
+    },
+
+    afterFooterText: {
+        color: theme.white,
+    },
+
+    socials: {
+        color: theme.white,
+        [theme.fn.smallerThan('sm')]: {
+            marginTop: theme.spacing.xs,
+        },
+    },
+
+    socialItems: {
+        marginRight: '1rem',
+        '&:hover': {
+            backgroundColor: theme.colors.cqorange[7],
+        },
+    },
+
+    socialImages: {
+        color: theme.white,
+    }
+}))
 
 interface FooterLinksProps {
     data: {

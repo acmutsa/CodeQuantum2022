@@ -2,9 +2,9 @@ import {
   Center,
   Container,
   SimpleGrid,
+  useMantineTheme,
 } from '@mantine/core';
 import { sponsorList as Sponsors } from '../data/_data';
-import { useStyles } from '../css/style';
 
 interface SponsorProps {
   imagePath: string;
@@ -24,11 +24,11 @@ interface FeaturesGridProps {
 }
 
 export function FeaturesGrid({ data = Sponsors }: FeaturesGridProps) {
-  const { classes, theme } = useStyles();
+  const theme = useMantineTheme();
   const sponsors = data.map((sponsor, index) => <Sponsor {...sponsor} key={index} />);
 
   return (
-    <Container className={classes.sponsorWrapper}>
+    <Container>
       <SimpleGrid
         cols={3}
         spacing={theme.spacing.xl * 0.25}

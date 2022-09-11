@@ -1,7 +1,35 @@
 import { Container, Title, Text, Anchor } from '@mantine/core';
 import { ReactChild, ReactFragment, ReactPortal } from 'react';
-import { useStyles } from '../css/style';
+import { createStyles } from '@mantine/core';
 import { navLinks as HeaderLinks } from '../data/_data';
+
+const useStyles = createStyles((theme) => ({
+    section: {
+        padding: theme.spacing.xl * 1.5,
+    },
+
+    sectionTitle: {
+        fontSize: 25,
+        underline: 'none',
+        fontWeight: 700,
+        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+        marginBottom: theme.spacing.xs / 2,
+        textAlign: 'center',
+        color: theme.white
+    },
+
+    sponsorTitle: {
+        color: theme.white,
+        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+        fontWeight: 800,
+        marginBottom: theme.spacing.md,
+        textAlign: 'center',
+
+        [theme.fn.smallerThan('sm')]: {
+            fontSize: 28,
+        },
+    },
+}))
 
 // eslint-disable-next-line max-len
 export const Section = (props: { sectionData: number ; content: ReactChild | ReactFragment | ReactPortal | null | undefined; }) => {
