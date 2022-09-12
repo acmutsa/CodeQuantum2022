@@ -1,3 +1,4 @@
+import { GetServerSidePropsContext } from 'next';
 import { useState } from 'react';
 import { AppProps } from 'next/app';
 import { getCookie, setCookies } from 'cookies-next';
@@ -32,11 +33,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
       </Head>
 
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-        <MantineProvider
-          withGlobalStyles
-          withNormalizeCSS
-          theme={theme}
-        >
+        <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
           <NotificationsProvider>
             <Component {...pageProps} />
           </NotificationsProvider>
@@ -45,3 +42,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     </>
   );
 }
+
+App.getInitialProps = ({ ctx }: { ctx: GetServerSidePropsContext }) => ({
+  colorScheme: getCookie('mantine-color-scheme', ctx) || 'light',
+});
