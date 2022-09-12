@@ -1,17 +1,74 @@
 import React, { useState } from 'react';
-import {  
+import {
+    createStyles,
     Container, 
-    Group, 
-    useMantineTheme,
+    Group,
     Burger,
     MediaQuery,
     Modal,
     Header
 } from '@mantine/core';
 import Image from 'next/image';
-import { useStyles } from '../css/style';
 import Link from 'next/link'
 import { navLinks as HeaderLinks } from '../data/_data';
+
+const useStyles = createStyles((theme) => ({
+    navLink: {
+        display: 'block',
+        padding: '8px 12px',
+        borderRadius: theme.radius.sm,
+        textDecoration: 'none',
+        color: theme.white,
+        fontSize: theme.fontSizes.md,
+        lineHeight: theme.fontSizes.md * .12,
+        fontWeight: 500,
+
+        '&:hover': {
+            backgroundColor: theme.colors.cqorange[7],
+        },
+    },
+    
+    modalLink: {
+        display: 'flex',
+        lineHeight: 1,
+        padding: '8px 12px',
+        borderRadius: theme.radius.sm,
+        textDecoration: 'none',
+        color: theme.colors.cqorange[0],
+        fontSize: theme.fontSizes.xl,
+        fontWeight: 700,
+
+        '&:hover': {
+            backgroundColor: theme.colors.cqorange[7],
+        },
+    },
+
+    navLinkActive: {
+        '&, &:hover': {
+            backgroundColor: theme.colors.cqorange[4],
+            color: theme.white,
+        },
+    },
+    
+    header: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        height: '100%',
+        border: 'none',
+    },
+
+    headerbg:{ 
+        backgroundColor: theme.colors.cqgreen[4],
+        borderBottom: `1px solid ${theme.colors.cqorange[4]}`,
+    },
+
+    navLinks: {
+        [theme.fn.smallerThan('sm')]: {
+            display: 'none',
+        },
+    },
+}))
 
 export function HeaderSimple() {
     const { classes, cx } = useStyles();
