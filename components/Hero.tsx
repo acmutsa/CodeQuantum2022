@@ -165,12 +165,6 @@ export function HeroContentLeft() {
                         </Text>
                         <Title className={classes.subtitle} order={1}>November 5<sup>th</sup> - 6<sup>th</sup></Title>
                     </div>
-                    <Text className={classes.heroDescription} size="xl" mt="xl">
-                        <Title className={classes.boldHeading}>What is{' '}
-                            <Text component="span" variant="gradient" gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }} inherit>CodeQuantum</Text>?
-                        </Title>
-                        CodeQuantum is San Antonio's first 24-hour hackathon geared towards <a className={classes.aLinks} href="https://www.womenforpoliticalchange.org/appendix" rel="external">marginalized genders</a> to promote inclusivity and diversity! Organized by the ACM-W chapter at UTSA, CodeQuantum is dedicated to creating a safe hacking space for students in the tech field.
-                    </Text>
 
                     <div className={classes.centerText}>
                         <Button 

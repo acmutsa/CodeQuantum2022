@@ -1,4 +1,4 @@
-import { Container, Title, Text, Anchor } from '@mantine/core';
+import { Container, Title, Text, Anchor, Center } from '@mantine/core';
 import { ReactChild, ReactFragment, ReactPortal } from 'react';
 import { createStyles } from '@mantine/core';
 import { navLinks as HeaderLinks } from '../data/_data';
@@ -31,24 +31,26 @@ const useStyles = createStyles((theme) => ({
     },
 }))
 
-// eslint-disable-next-line max-len
 export const Section = (props: { sectionData: number ; content: ReactChild | ReactFragment | ReactPortal | null | undefined; }) => {
     const { classes, theme } = useStyles();
 
     return (
-        <Container className={classes.section} id={HeaderLinks[props.sectionData].link}>
-            {/* <Anchor href={HeaderLinks[props.sectionData].link} underline={false}> */}
+        <Center>
+            <Container className={classes.section} id={HeaderLinks[props.sectionData].link}>
                 <Title className={classes.sponsorTitle}>
                     <Text
                         component="span" 
                         variant="gradient" 
                         gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }} 
                         inherit
-                        >{HeaderLinks[props.sectionData].label}
+                    >
+                        {HeaderLinks[props.sectionData].label}
                     </Text>
                 </Title>
-            {/* </Anchor> */}
-            {props.content}
-        </Container>
+
+                {/* content after section title */}
+                {props.content}
+            </Container>
+        </Center>
     );
 };
