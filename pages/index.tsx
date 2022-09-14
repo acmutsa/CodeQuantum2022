@@ -6,7 +6,8 @@ import {
     Footer,
     CQHeader,
     About,
-    Team
+    Team,
+    FAQ
 } from '../components';
 
 const useStyles = createStyles((theme) => ({
@@ -32,6 +33,7 @@ export default function HomePage() {
         >
             <Hero/>
             <Section sectionData={1} content={<About/>} />
+            <Section sectionData={3} content={<FAQ/>} />
             <Section sectionData={4} content={<Team/>} />
             <Section sectionData={5} content={<Sponsors/>} />
         </AppShell>

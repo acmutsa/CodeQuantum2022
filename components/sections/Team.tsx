@@ -1,27 +1,68 @@
 import { 
     Avatar,
     Container,
-    Card, 
-    Image, 
+    Card,
     Text, 
-    Badge, 
-    Button, 
-    Group, 
+    Badge,
+    Group,
     SimpleGrid,
     useMantineTheme,
     Center,
-    createStyles
+    createStyles,
+    ActionIcon,
+    MantineTheme
 } from '@mantine/core';
-import { IconBrandLinkedin } from '@tabler/icons'
+import { IconBrandLinkedin, IconBrandInstagram } from '@tabler/icons'
 import { teamPhotos as teamMembers } from '../../data/_data';
 
 const useStyles = createStyles((theme) => ({
-    linkedInBadge: {
+    socialBadge: {
         '&:hover': {
             cursor: 'pointer'
         },
-    }
+    },
 }))
+
+function renderIcon( value: string ) {
+    switch(value.toLowerCase()) {
+        case 'linkedin':
+          return <IconBrandLinkedin size={16} />
+        case 'instagram':
+            return <IconBrandInstagram size={16} />
+        default:
+            return null;
+    }
+  }
+
+function SocialLinks( value: string, social: string, link: string ) {
+    const alt = `${social} Icon Logo`
+
+    return !!value ? 
+        <ActionIcon >
+            <Avatar 
+                component="a" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                href={link}
+                alt={alt}
+                size={24} 
+                color="orange"
+            >
+                {renderIcon(social)}
+            </Avatar>
+        </ActionIcon>
+        :
+        null
+}
+
+function InformationBadge( theme: MantineTheme, value: string ) {
+    return !!value ?
+        <Badge size="sm" variant="gradient" gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }}>
+            {value}
+        </Badge>
+        :
+        null
+}
 
 interface TeamProps {
     name: string;
@@ -29,54 +70,41 @@ interface TeamProps {
     classification: string;
     pronouns: string;
     photoPath: string;
+    tree: string,
     linkedIn: string;
+    instagram: string;
 }
 
-function AvatarCard({ name, title, classification, pronouns, photoPath, linkedIn } : TeamProps) {
-    const { classes } = useStyles();
+function AvatarCard({ name, title, classification, pronouns, tree, photoPath, linkedIn, instagram } : TeamProps) {
     const theme = useMantineTheme();
+
+    const profilePhoto = photoPath ? `/images/team/${photoPath}` : '/images/team/default_profile.svg'
+    const profilePhotoAlt = photoPath ? `Headshot of ${name}` : 'default profile picture with some foliage'
+    const linkedInLink = linkedIn ? `https://www.linkedin.com/in/${linkedIn}` : ''
+    const instagramLink = instagram ? `https://www.instagram.com/${instagram}` : ''
 
     return (
         <Card shadow="sm" p="lg" radius="md" style={{ backgroundColor: 'unset'}}>
             <Card.Section pt='sm'>
                 <Center>
-                    <Avatar
-                        radius="xl" 
-                        size="xl" 
-                        src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=250&q=80"
-                    />
+                    <Avatar alt={profilePhotoAlt} radius="xl" size="xl" src={profilePhoto}/>
                 </Center>
             </Card.Section>
 
             <Group position="apart" mt="md" mb="xs">
-                <Text weight={500} style={{ color: theme.colors.white[0]}}>{name}</Text>
+                <Text weight={900} style={{ color: theme.colors.white[0]}}>{name}</Text>
             </Group>
 
             <Group mt="md" mb="xs">
-                <Badge variant="gradient" gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }}>
-                    {title}
-                </Badge>
-                <Badge variant="gradient" gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }}>
-                    {pronouns}
-                </Badge>
-                <Badge variant="gradient" gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }}>
-                    {classification}
-                </Badge>
-                {!!linkedIn ? 
-                    <Badge 
-                        component="a" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        href="https://google.com"
-                        className={classes.linkedInBadge}
-                        variant="gradient" 
-                        gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }}
-                    >
-                        LinkedIn
-                    </Badge>
-                    :
-                    null
-                }
+                {InformationBadge( theme, title )}
+                {InformationBadge( theme, pronouns )}
+                {InformationBadge( theme, classification )}
+                {InformationBadge( theme, tree )}
+            </Group>
+
+            <Group mt="mb" mb="xs">
+                {SocialLinks( linkedIn, 'LinkedIn', linkedInLink )}
+                {SocialLinks( instagram, 'Instagram', instagramLink )}
             </Group>
         </Card>
     )

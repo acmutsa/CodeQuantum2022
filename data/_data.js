@@ -81,33 +81,57 @@ export const sponsorList = [
     },
 ];
 
-// TEAM
-// team information and photo location
+// TEAM - team information and photo location
 // @name - team member name
 // @title - title for position
 // @classification - year of schooling
 // @pronouns - pronouns
-// @photoPath - path url where photo is saved
+// @tree - type of tree given during a WWF quiz
+// @photoPath - name of photo inlucding file extension
 // @linkedIn - OPTIONAL linkedIn url ID
-// - - the rest of the linkedIn profile link is generated later
+// @instagram - OPTIONAL instagram handle
+// - - the rest of the social links are generated later
 export const teamPhotos = [
     {
         name: 'Clarisse Cabagay',
         title: 'Director',
         classification: 'Junior',
         pronouns: 'she/her',
-        photoPath: '/images/team/clarisse-cabagay.png',
-        linkedIn: ''
+        photoPath: '',
+        tree: 'Alder',
+        linkedIn: '',
+        instagram: 'clarisse_cabagay',
+    },
+    {
+        name: 'Swapomti Surampudi',
+        title: 'Co-Director',
+        classification: 'Junior',
+        pronouns: 'she/her',
+        photoPath: 'swapomti-surampudi.png',
+        tree: 'Pine',
+        linkedIn: '',
+        instagram: '',
+    },
+    {
+        name: 'Diem Bui',
+        title: 'Sponsorship',
+        classification: 'Junior',
+        pronouns: 'she/her',
+        photoPath: 'diem-bui.png',
+        tree: 'Spruce',
+        linkedIn: 'diem-b-97a2951b5',
+        instagram: 'diem756',
     },
     {
         name: 'Zaquariah Holland',
         title: 'Design',
         classification: 'Senior',
         pronouns: 'he/him',
-        photoPath: '/images/team/zaquariah-holland.png',
-        linkedIn: 'zaquariah-holland'
+        photoPath: '',
+        tree: 'Palm',
+        linkedIn: 'zaquariah-holland',
+        instagram: ''
     },
-
 ];
 
 // Footer data

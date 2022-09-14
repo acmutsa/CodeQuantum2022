@@ -1,4 +1,5 @@
-export { SimpleAbout as About} from './sections/About'
+export { FAQ as FAQ } from './sections/FAQ'
+export { SimpleAbout as About } from './sections/About'
 export { FeaturesGrid as Sponsors } from './sections/Sponsors'
 export { Team as Team } from './sections/Team'
 export { FooterLinks as Footer } from './Footer'
