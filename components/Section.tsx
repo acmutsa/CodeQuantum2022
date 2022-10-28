@@ -20,6 +20,7 @@ const useStyles = createStyles((theme) => ({
 
     sponsorTitle: {
         color: theme.white,
+        marginTop: '75px', // height of our navigation bar
         fontFamily: `Greycliff CF, ${theme.fontFamily}`,
         fontWeight: 800,
         marginBottom: theme.spacing.md,

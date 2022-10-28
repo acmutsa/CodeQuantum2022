@@ -7,7 +7,8 @@ import {
     CQHeader,
     About,
     Team,
-    FAQ
+    FAQ,
+    Tracks
 } from '../components';
 
 const useStyles = createStyles((theme) => ({
@@ -33,8 +34,9 @@ export default function HomePage() {
         >
             <Hero/>
             <Section sectionData={1} content={<About/>} />
-            <Section sectionData={3} content={<FAQ/>} />
-            <Section sectionData={4} content={<Team/>} />
+            <Section sectionData={2} content={<Tracks/>} />
+            <Section sectionData={3} content={<Team/>} />
+            <Section sectionData={4} content={<FAQ/>} />
             <Section sectionData={5} content={<Sponsors/>} />
         </AppShell>
     );

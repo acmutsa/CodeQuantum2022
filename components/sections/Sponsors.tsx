@@ -40,7 +40,7 @@ function Sponsor({ imagePath, altText } : SponsorProps) {
 
   return (
       <Center>
-        <img src={imagePath} alt={altText} className={classes.sponsorImageSize}/>
+        <img src={`/images/sponsors/${imagePath}`} alt={altText} className={classes.sponsorImageSize}/>
       </Center>
   );
 }

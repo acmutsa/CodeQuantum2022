@@ -84,7 +84,7 @@ function AvatarCard({ name, title, classification, pronouns, tree, photoPath, li
     const instagramLink = instagram ? `https://www.instagram.com/${instagram}` : ''
 
     return (
-        <Card shadow="sm" p="lg" radius="md" style={{ backgroundColor: 'unset'}}>
+        <Card shadow="sm" p="lg" radius="md" style={{ backgroundColor: 'unset' }}>
             <Card.Section pt='sm'>
                 <Center>
                     <Avatar alt={profilePhotoAlt} radius="xl" size="xl" src={profilePhoto}/>
@@ -92,7 +92,7 @@ function AvatarCard({ name, title, classification, pronouns, tree, photoPath, li
             </Card.Section>
 
             <Group position="apart" mt="md" mb="xs">
-                <Text weight={900} style={{ color: theme.colors.white[0]}}>{name}</Text>
+                <Text weight={900} style={{ color: theme.colors.white[0] }}>{name}</Text>
             </Group>
 
             <Group mt="md" mb="xs">

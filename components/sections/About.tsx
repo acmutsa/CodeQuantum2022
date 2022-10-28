@@ -71,9 +71,9 @@ export function SimpleAbout() {
                         variant="gradient" 
                         gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }} 
                         inherit>we</Text>
-                    {' '}are
+                    {' '}are!
                 </Title>
-                <a className={classes.aLinks} href="https://acmutsa.org/suborg_acmw" rel="external">Association of Computing Machinery - Women's Chapter</a> at the University of Texas at San Antonio is an all-inclusive organization focused on creating an engaging academic, professional, and social network for women and minorities in technology. Our purpose is to connect students with leaders and encourage them to pursue career opportunities in computing fields and to mentor for academic and professional success.
+                We are <a className={classes.aLinks} href="https://acmutsa.org/suborg_acmw" rel="external">Association of Computing Machinery - Women's Chapter</a> at the University of Texas at San Antonio is an all-inclusive organization focused on creating an engaging academic, professional, and social network for women and minorities in technology. Our purpose is to connect students with leaders and encourage them to pursue career opportunities in computing fields and to mentor for academic and professional success.
             </Text>
         </>
     );
