@@ -1,38 +1,50 @@
-import { Container, Title, MantineProvider } from '@mantine/core';
-import Link from 'next/link';
+import { Container, Title, Text, Anchor, Center } from '@mantine/core';
 import { ReactChild, ReactFragment, ReactPortal } from 'react';
-import { UrlObject } from 'url';
-import {useStyles} from '../css/style';
+import { createStyles } from '@mantine/core';
+import { navLinks as HeaderLinks } from '../data/_data';
 
-// eslint-disable-next-line max-len
-export const Section = (props: { href: string | UrlObject; title: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined; children: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined; }) => {
-    const { classes } = useStyles();
+const useStyles = createStyles((theme) => ({
+    sectionTitle: {
+        color: theme.white,
+        marginTop: '75px', // height of our navigation bar
+        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+        fontWeight: 800,
+        marginBottom: theme.spacing.md,
+        textAlign: 'center',
+
+        [theme.fn.smallerThan('sm')]: {
+            fontSize: 28,
+        },
+    },
+}))
+
+interface SectionProps {
+    sectionData?: number;
+    optionalTitle?: string;
+    content: ReactChild | ReactFragment | ReactPortal | null | undefined;
+}
+
+export const Section = ({ sectionData, content, optionalTitle }: SectionProps) => {
+    const { classes, theme } = useStyles();
+    const sectionValueLink = sectionData ? HeaderLinks[sectionData] : '';
 
     return (
-        <MantineProvider
-          theme={{
-                spacing: { xs: 15, sm: 20, md: 25, lg: 30, xl: 40 },
-                components: {
-                    Container: {
-                        defaultProps: {
-                            sizes: {
-                                xs: 540,
-                                sm: 720,
-                                md: 960,
-                                lg: 1140,
-                                xl: 1320,
-                            },
-                        },
-                    },
-                },
-            }}
-        >
-            <Container className={classes.section}>
-                <Link href={props.href}>
-                    <a><Title className={classes.sectionTitle}>{props.title}</Title></a>
-                </Link>
-                <span className={classes.description}>{props.children}</span>
+        <Center>
+            <Container id={sectionData ? HeaderLinks[sectionData].link : optionalTitle}>
+                <Title className={classes.sectionTitle}>
+                    <Text
+                        component="span" 
+                        variant="gradient" 
+                        gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }} 
+                        inherit
+                    >
+                        {sectionData ? HeaderLinks[sectionData].label : optionalTitle}
+                    </Text>
+                </Title>
+
+                {/* content after section title */}
+                {content}
             </Container>
-        </MantineProvider>
+        </Center>
     );
 };

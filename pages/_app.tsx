@@ -32,7 +32,7 @@ export default function App(props: AppProps) {
           content="hackathon, coding, computer science, utsa, college, marginalized genders"
         />
         <meta name="robots" content="index, nofollow" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="author" content="Zaquariah Holland and Danielle Tobler" />
