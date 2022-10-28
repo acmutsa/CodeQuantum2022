@@ -127,6 +127,18 @@ export const teamPhotos = [
         pronouns: 'She/They',
         photoPath: 'skyler-comin.jpg',
         tree: 'Red Alder',
+        linkedIn: '',
+        instagram: '',
+    },
+    {
+        name: 'Raghav Patel',
+        title: 'Logistics',
+        classification: 'Masters',
+        pronouns: 'He/Him',
+        photoPath: 'raghav-patel.png',
+        tree: 'Douglas Fir',
+        linkedIn: 'raghav-p-220518169',
+        instagram: '',
     },
     {
         name: 'Diem Bui',
@@ -139,31 +151,14 @@ export const teamPhotos = [
         instagram: 'diem756',
     },
     {
-        name: 'Zaquariah Holland',
-        title: 'Design',
-        classification: 'Senior',
-        pronouns: 'he/him',
-        photoPath: '',
-        tree: 'Palm',
-        linkedIn: 'zaquariah-holland',
-        instagram: ''
-    },
-    {
-        name: 'Raghav Patel',
-        title: 'Logistics',
-        classification: 'Masters',
-        pronouns: 'He/Him',
-        photoPath: 'raghav-patel.png',
-        tree: 'Douglas Fir',
-        linkedIn: 'raghav-p-220518169',
-    },
-    {
         name: 'Christian Salinas',
         title: 'Hacker Experience ',
         classification: 'Senior',
         pronouns: 'He',
         photoPath: 'christian-salinas.jpeg',
         tree: 'Coconut Palm',
+        linkedIn: '',
+        instagram: '',
     },
     {
         name: 'Vamshi Ponnala',
@@ -173,6 +168,7 @@ export const teamPhotos = [
         photoPath: 'vamshi-ponnala.jpg',
         tree: 'Apple',
         linkedIn: 'vamshi-ponnala-72414b1b7',
+        instagram: '',
     },
     {
         name: 'Joshua Lazaro',
@@ -192,6 +188,7 @@ export const teamPhotos = [
         photoPath: 'michael-martini.JPG',
         tree: 'Red Alder',
         linkedIn: 'michael-a-martini/',
+        instagram: '',
     },
     {
         name: 'Renae Siewert',
@@ -200,17 +197,19 @@ export const teamPhotos = [
         pronouns: 'she/her',
         photoPath: 'renae-siewert.jpg',
         tree: 'Douglas Fir',
+        linkedIn: '',
+        instagram: '',
     },
-    // {
-    //     name: 'BLANK',
-    //     title: 'BLANK',
-    //     classification: 'BLANK',
-    //     pronouns: 'BLANK',
-    //     photoPath: 'BLANK',
-    //     tree: 'BLANK',
-    //     linkedIn: 'BLANK',
-    //     instagram: 'BLANK',
-    // },
+    {
+        name: 'Zaquariah Holland',
+        title: 'Design',
+        classification: 'Senior',
+        pronouns: 'he/him',
+        photoPath: '',
+        tree: 'Palm',
+        linkedIn: 'zaquariah-holland',
+        instagram: ''
+    },
 ];
 
 // Footer data
