@@ -4,21 +4,7 @@ import { createStyles } from '@mantine/core';
 import { navLinks as HeaderLinks } from '../data/_data';
 
 const useStyles = createStyles((theme) => ({
-    section: {
-        padding: theme.spacing.xl * 1.5,
-    },
-
     sectionTitle: {
-        fontSize: 25,
-        underline: 'none',
-        fontWeight: 700,
-        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-        marginBottom: theme.spacing.xs / 2,
-        textAlign: 'center',
-        color: theme.white
-    },
-
-    sponsorTitle: {
         color: theme.white,
         marginTop: '75px', // height of our navigation bar
         fontFamily: `Greycliff CF, ${theme.fontFamily}`,
@@ -32,25 +18,32 @@ const useStyles = createStyles((theme) => ({
     },
 }))
 
-export const Section = (props: { sectionData: number ; content: ReactChild | ReactFragment | ReactPortal | null | undefined; }) => {
+interface SectionProps {
+    sectionData?: number;
+    optionalTitle?: string;
+    content: ReactChild | ReactFragment | ReactPortal | null | undefined;
+}
+
+export const Section = ({ sectionData, content, optionalTitle }: SectionProps) => {
     const { classes, theme } = useStyles();
+    const sectionValueLink = sectionData ? HeaderLinks[sectionData] : '';
 
     return (
         <Center>
-            <Container className={classes.section} id={HeaderLinks[props.sectionData].link}>
-                <Title className={classes.sponsorTitle}>
+            <Container id={sectionData ? HeaderLinks[sectionData].link : optionalTitle}>
+                <Title className={classes.sectionTitle}>
                     <Text
                         component="span" 
                         variant="gradient" 
                         gradient={{ from: theme.colors.cqorange[4], to: theme.colors.cqred[4] }} 
                         inherit
                     >
-                        {HeaderLinks[props.sectionData].label}
+                        {sectionData ? HeaderLinks[sectionData].label : optionalTitle}
                     </Text>
                 </Title>
 
                 {/* content after section title */}
-                {props.content}
+                {content}
             </Container>
         </Center>
     );

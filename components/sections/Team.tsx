@@ -10,12 +10,21 @@ import {
     Center,
     createStyles,
     ActionIcon,
-    MantineTheme
+    MantineTheme,
+    MediaQuery
 } from '@mantine/core';
 import { IconBrandLinkedin, IconBrandInstagram } from '@tabler/icons'
 import { teamPhotos as teamMembers } from '../../data/_data';
 
 const useStyles = createStyles((theme) => ({
+    textContent: {
+        color: theme.white,
+
+        [`@media (max-width: ${theme.breakpoints.xs}px)`]: {
+            textAlign: 'center',
+        }
+    },
+
     socialBadge: {
         '&:hover': {
             cursor: 'pointer'
@@ -77,6 +86,7 @@ interface TeamProps {
 
 function AvatarCard({ name, title, classification, pronouns, tree, photoPath, linkedIn, instagram } : TeamProps) {
     const theme = useMantineTheme();
+    const { classes } = useStyles();
 
     const profilePhoto = photoPath ? `/images/team/${photoPath}` : '/images/team/default_profile.svg'
     const profilePhotoAlt = photoPath ? `Headshot of ${name}` : 'default profile picture with some foliage'
@@ -92,15 +102,17 @@ function AvatarCard({ name, title, classification, pronouns, tree, photoPath, li
             </Card.Section>
 
             <Group position="apart" mt="md" mb="xs">
-                <Text weight={900} style={{ color: theme.colors.white[0] }}>{name}</Text>
+                <Text weight={900} className={classes.textContent}>{name}</Text>
             </Group>
 
-            <Group mt="md" mb="xs">
-                {InformationBadge( theme, title )}
-                {InformationBadge( theme, pronouns )}
-                {InformationBadge( theme, classification )}
-                {InformationBadge( theme, tree )}
-            </Group>
+            <MediaQuery smallerThan="xs" styles={{ display: "none" }}>
+                <Group mt="md" mb="xs">
+                    {InformationBadge( theme, title )}
+                    {InformationBadge( theme, pronouns )}
+                    {InformationBadge( theme, classification )}
+                    {InformationBadge( theme, tree )}
+                </Group>
+            </MediaQuery>
 
             <Group mt="mb" mb="xs">
                 {SocialLinks( linkedIn, 'LinkedIn', linkedInLink )}
@@ -125,7 +137,7 @@ export function Team({ data = teamMembers }: FeaturesGridProps) {
                 spacing={theme.spacing.xl * 2}
                 breakpoints={[
                     { maxWidth: 980, cols: 3, spacing: 'md' },
-                    { maxWidth: 755, cols: 1, spacing: 'sm' },
+                    { maxWidth: 755, cols: 2, spacing: 'sm' },
                 ]}
                 >
                 {team}

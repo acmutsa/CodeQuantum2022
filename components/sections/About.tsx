@@ -25,7 +25,7 @@ const useStyles = createStyles((theme) => ({
 
     heroDescription: {
         color: theme.white,
-        maxWidth: 600,
+        maxWidth: 960,
 
         [theme.fn.smallerThan('sm')]: {
             maxWidth: '100%',
