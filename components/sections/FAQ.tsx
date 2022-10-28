@@ -1,5 +1,5 @@
-import { Accordion, createStyles, useMantineTheme } from '@mantine/core'
-import { faqInformation as faqInformation } from '../../data/_FAQ_data'
+import { Accordion, createStyles, useMantineTheme } from '@mantine/core';
+import { faqInformation } from '../../data/_FAQ_data';
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -8,15 +8,15 @@ const useStyles = createStyles((theme) => ({
     borderRadius: theme.radius.sm,
 
     [`@media (min-width: ${theme.breakpoints.xl}px)`]: {
-        width: 750,
+      width: 750,
     },
 
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-        width: 500,
+      width: 500,
     },
 
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-        maxWidth: 350,
+      maxWidth: 350,
     },
   },
 
@@ -47,22 +47,22 @@ const useStyles = createStyles((theme) => ({
       transform: 'rotate(-90deg)',
     },
   },
-}))
+}));
 
 interface FAQProps {
-    question: string,
-    information: string,
+  question: string;
+  information: string;
 }
 
 function QuestionCard({ question, information }: FAQProps) {
   const { classes } = useStyles();
 
   return (
-      <Accordion.Item value={question}>
-          <Accordion.Control className={classes.faqTitle}>{question}</Accordion.Control>
-          <Accordion.Panel>{information}</Accordion.Panel>
-      </Accordion.Item>
-  )
+    <Accordion.Item value={question}>
+      <Accordion.Control className={classes.faqTitle}>{question}</Accordion.Control>
+      <Accordion.Panel>{information}</Accordion.Panel>
+    </Accordion.Item>
+  );
 }
 
 interface FeaturesGridProps {
@@ -82,7 +82,7 @@ export function FAQ({ data = faqInformation }: FeaturesGridProps) {
       classNames={classes}
       className={classes.root}
     >
-        {faq}
+      {faq}
     </Accordion>
-  )
+  );
 }

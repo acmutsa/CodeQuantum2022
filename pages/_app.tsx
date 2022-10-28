@@ -1,7 +1,6 @@
-import { GetServerSidePropsContext } from 'next';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { AppProps } from 'next/app';
-import { getCookie, setCookies } from 'cookies-next';
+import { setCookies } from 'cookies-next';
 import Head from 'next/head';
 import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
