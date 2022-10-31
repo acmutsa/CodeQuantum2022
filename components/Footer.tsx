@@ -97,6 +97,10 @@ const useStyles = createStyles((theme) => ({
 
   afterFooterText: {
     color: theme.white,
+
+    [`@media (max-width: ${theme.breakpoints.xs}px)`]: {
+      textAlign: 'center',
+    }
   },
 
   socials: {
@@ -164,8 +168,13 @@ export function FooterLinks({ data }: FooterLinksProps) {
         <div className={classes.groups}>{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>
-        <Text className={classes.afterFooterText} size="sm">
-          © 2022 CodeQuantum // Designed with ♥ by the CodeQuantum Team
+        <Text className={classes.afterFooterText} size="sm" align="left">
+          CodeQuantum adheres to the 
+          <Link href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
+            <a>
+              Major League Hacking Code Of Conduct
+            </a>
+          </Link>
         </Text>
 
         <Group spacing={0} className={classes.socials} position="right" noWrap>
@@ -198,6 +207,10 @@ export function FooterLinks({ data }: FooterLinksProps) {
             </Link>
           </ActionIcon>
         </Group>
+
+        <Text className={classes.afterFooterText} size="sm" align="right">
+          © 2022 CodeQuantum // Designed with ♥ by the CodeQuantum Team
+        </Text>
       </Container>
     </footer>
   );

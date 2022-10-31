@@ -9,7 +9,7 @@ const useStyles = createStyles((theme) => ({
   image: {
     maxHeight: 150,
     maxWidth: 150,
-    marginRight: 20,
+    marginLeft: 20,
     marginBottom: 0,
     marginTop: 5,
     float: 'right',
@@ -18,7 +18,7 @@ const useStyles = createStyles((theme) => ({
       height: 'auto',
       maxHeight: 'none',
       maxWidth: 'none',
-      marginRight: 0,
+      marginLeft: 0,
       marginBottom: 0,
       marginTop: 5,
       float: 'none',
