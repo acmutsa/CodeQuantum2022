@@ -10,8 +10,8 @@ import {
   FAQ,
   Tracks,
   Challenges,
+  Schedule,
 } from '../components';
-import Schedule from '../components/sections/Schedule';
 
 const useStyles = createStyles((theme) => ({
   page: {

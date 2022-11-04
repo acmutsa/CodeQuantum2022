@@ -4,7 +4,7 @@ import events from '../../data/schedule.json';
 
 const useStyles = createStyles((theme) => ({
   box: {
-    height: 300,
+    height: '60vh',
     minWidth: '50vw',
 
     [`@media (max-width: ${theme.breakpoints.xs}px)`]: {
@@ -24,7 +24,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export default function Schedule() {
+export function Schedule() {
   const { classes } = useStyles();
   const {
     breakpoints: { xs: xsBreakpoint },
