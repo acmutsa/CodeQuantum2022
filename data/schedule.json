@@ -168,6 +168,14 @@
         "additionalInformation": ""
     },
     {
+        "event": "Submissions Due!",
+        "type": "",
+        "time": "12:00 PM",
+        "day": "",
+        "location": "",
+        "additionalInformation": ""
+    },
+    {
         "event": "Lunch",
         "type": "food",
         "time": "12:00 PM",
@@ -176,17 +184,9 @@
         "additionalInformation": ""
     },
     {
-        "event": "Submissions Due",
+        "event": "Judging",
         "type": "",
         "time": "1:30 PM",
-        "day": "",
-        "location": "",
-        "additionalInformation": ""
-    },
-    {
-        "event": "Judging Starts",
-        "type": "",
-        "time": "2:00 PM",
         "day": "",
         "location": "1st Half of Ballroom",
         "additionalInformation": ""
