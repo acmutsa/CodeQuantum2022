@@ -5,7 +5,9 @@
         "time": "9:00 AM",
         "day": "Satuday",
         "location": "Galleria",
-        "additionalInformation": "Your chance to check-in to the event to show that you are attending!"
+        "additionalInformation": "Your chance to check-in to the event to show that you are attending!",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Breakfast & Snacks",
@@ -13,7 +15,9 @@
         "time": "9:00 AM",
         "day": "",
         "location": "Galleria",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": ["Pastery Tray", "Granola Bars", "Pop Tarts", "Juices"],
+        "menuTitle": ""
     },
     {
         "event": "Sponsor Fair",
@@ -21,7 +25,9 @@
         "time": "9:00 AM - 10:15 AM",
         "day": "",
         "location": "Galleria",
-        "additionalInformation": "Mingle with our sponsors and check out their many opportunities!"
+        "additionalInformation": "Mingle with our sponsors and check out their many opportunities!",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Opening Ceremonies",
@@ -29,15 +35,19 @@
         "time": "10:30 AM",
         "day": "",
         "location": "1st Half of Ballroom",
-        "additionalInformation": "Come hear everything about everying happening this weekend."
+        "additionalInformation": "Come hear everything about everying happening this weekend.",
+        "menu": [],
+        "menuTitle": ""
     },
     {
-        "event": "Hacking Beings",
+        "event": "Hacking Begins",
         "type": "",
         "time": "12:00 PM",
         "day": "",
         "location": "",
-        "additionalInformation": "READY. SET. GO!"
+        "additionalInformation": "READY. SET. GO!",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Sticker Scavenger Hunt",
@@ -45,7 +55,9 @@
         "time": "12:00 PM",
         "day": "",
         "location": "1st Half of Ballroom",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "CTF Beings",
@@ -53,7 +65,9 @@
         "time": "12:00 PM",
         "day": "",
         "location": "1st Half of Ballroom",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Team Building Activity",
@@ -61,7 +75,9 @@
         "time": "12:00 PM",
         "day": "",
         "location": "Galleria",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Lunch",
@@ -69,7 +85,8 @@
         "time": "1:00 PM",
         "day": "",
         "location": "Galleria",
-        "additionalInformation": ""
+        "menu": ["Pork", "Chicken", "Veggie"],
+        "menuTitle": "FreeBirds"
     },
     {
         "event": "Introduction to Game Development",
@@ -77,7 +94,9 @@
         "time": "2:30 PM",
         "day": "",
         "location": "Willow",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Embedded Security",
@@ -85,7 +104,9 @@
         "time": "2:30 PM",
         "day": "",
         "location": "2nd Half of Ballroom",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Intro to Machine Learning with Python",
@@ -93,7 +114,9 @@
         "time": "3:45 PM",
         "day": "",
         "location": "Willow",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Gender Minorities in STEM Panel",
@@ -101,7 +124,9 @@
         "time": "3:45 PM",
         "day": "",
         "location": "2nd Half of Ballroom",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Dinner",
@@ -109,7 +134,9 @@
         "time": "6:00 PM",
         "day": "",
         "location": "Galleria",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": ["Spaghetti", "Fettuccini"],
+        "menuTitle": "Volare Pasta"
     },
     {
         "event": "Intro to Cybersecurity/CTF",
@@ -117,7 +144,9 @@
         "time": "8:00 PM",
         "day": "",
         "location": "Ash",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Fall Themed Bingo",
@@ -125,7 +154,9 @@
         "time": "9:30 PM",
         "day": "",
         "location": "Galleria",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Midnight Snack",
@@ -133,7 +164,9 @@
         "time": "12:00 AM",
         "day": "Sunday",
         "location": "1st Half of Ballroom",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Cup Stacking Team Activity",
@@ -141,7 +174,9 @@
         "time": "12:30 AM",
         "day": "",
         "location": "Galleria",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Breakfast",
@@ -149,7 +184,9 @@
         "time": "8:00 AM",
         "day": "",
         "location": "Galleria",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": ["bean and cheese", "bacon and cheese", "potato and egg"],
+        "menuTitle": "Mama Margie's Tacos"
     },
     {
         "event": "How to Submit/Pitch",
@@ -157,7 +194,9 @@
         "time": "10:00 AM",
         "day": "",
         "location": "1st Half of Ballroom",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Wikipedia Racing with MLH",
@@ -165,7 +204,9 @@
         "time": "11:00 AM",
         "day": "",
         "location": "Galleria",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Submissions Due!",
@@ -173,7 +214,9 @@
         "time": "12:00 PM",
         "day": "",
         "location": "",
-        "additionalInformation": ""
+        "additionalInformation": "Information here: https://guide.cqhacks.org/preparing-for-submission",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Lunch & Prep",
@@ -181,7 +224,9 @@
         "time": "12:00 PM",
         "day": "",
         "location": "Galleria",
-        "additionalInformation": ""
+        "additionalInformation": "Time to grab some lunch and prepare your presentations!",
+        "menu": ["Pepperoni", "Cheese"],
+        "menuTitle": "Pizza"
     },
     {
         "event": "Judging",
@@ -189,7 +234,9 @@
         "time": "1:30 PM",
         "day": "",
         "location": "1st Half of Ballroom",
-        "additionalInformation": ""
+        "additionalInformation": "Ready to present? Now is the time!",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Karaoke",
@@ -197,7 +244,9 @@
         "time": "3:00 PM",
         "day": "",
         "location": "1st Half of Ballroom",
-        "additionalInformation": ""
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
     },
     {
         "event": "Closing Ceremonies",
@@ -205,6 +254,8 @@
         "time": "4:00 PM",
         "day": "",
         "location": "",
-        "additionalInformation": ""
+        "additionalInformation": "Let's find out what has happened this weekend!",
+        "menu": [],
+        "menuTitle": ""
     }
 ]

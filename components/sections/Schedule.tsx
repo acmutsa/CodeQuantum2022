@@ -72,7 +72,6 @@ export function Schedule() {
         shadow="sm"
         horizontalSpacing="md"
         highlightOnHover
-        textSelectionDisabled
         rowExpansion={{
           collapseProps: {
             transitionDuration: 500,
@@ -81,15 +80,27 @@ export function Schedule() {
           },
           content: ({ record }) => (
             <Stack p="xs" spacing={6} className={classes.rowsExpanded}>
+              {/* display location information */}
               {record.location ? (
                 <Text>
                   <Text className={classes.rowsHeader}>Location:</Text> {record.location}
                 </Text>
               ) : null}
+              {/* display any additional information about the specified event */}
               {record.additionalInformation ? (
                 <Text>
                   <Text className={classes.rowsHeader}>Information:</Text>{' '}
                   {record.additionalInformation}
+                </Text>
+              ) : null}
+              {/* if item is related to food, display a menu */}
+              {record.menu.length !== 0 ? (
+                <Text>
+                  <Text className={classes.rowsHeader}>Menu:</Text>
+                  {record.menuTitle ? <Text italic={true}>{record.menuTitle}</Text> : null}
+                  {record.menu.map((item: string) =>
+                    item ? <Text key={item}>- {item}</Text> : null
+                  )}
                 </Text>
               ) : null}
             </Stack>
