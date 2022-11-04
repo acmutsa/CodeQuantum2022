@@ -100,7 +100,7 @@ const useStyles = createStyles((theme) => ({
 
     [`@media (max-width: ${theme.breakpoints.xs}px)`]: {
       textAlign: 'center',
-    }
+    },
   },
 
   socials: {
@@ -169,11 +169,9 @@ export function FooterLinks({ data }: FooterLinksProps) {
       </Container>
       <Container className={classes.afterFooter}>
         <Text className={classes.afterFooterText} size="sm" align="left">
-          CodeQuantum adheres to the 
+          CodeQuantum adheres to the
           <Link href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">
-            <a>
-              Major League Hacking Code Of Conduct
-            </a>
+            <a>Major League Hacking Code Of Conduct</a>
           </Link>
         </Text>
 

@@ -1,9 +1,4 @@
-import {
-  Container,
-  createStyles,
-  Text,
-  Title,
-} from '@mantine/core';
+import { Container, createStyles, Text, Title } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   image: {

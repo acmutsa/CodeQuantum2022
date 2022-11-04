@@ -10,6 +10,7 @@ import {
   FAQ,
   Tracks,
   Challenges,
+  Schedule,
 } from '../components';
 
 const useStyles = createStyles((theme) => ({
@@ -33,9 +34,10 @@ export default function HomePage() {
       <Section sectionData={1} content={<About />} />
       <Section sectionData={2} content={<Tracks />} />
       <Section optionalTitle="Challenges" content={<Challenges />} />
-      <Section sectionData={3} content={<Team />} />
-      <Section sectionData={4} content={<FAQ />} />
-      <Section sectionData={5} content={<Sponsors />} />
+      <Section sectionData={3} content={<Schedule />} />
+      <Section sectionData={4} content={<Team />} />
+      <Section sectionData={5} content={<FAQ />} />
+      <Section sectionData={6} content={<Sponsors />} />
     </AppShell>
   );
 }

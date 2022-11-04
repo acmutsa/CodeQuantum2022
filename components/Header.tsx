@@ -74,7 +74,7 @@ const useStyles = createStyles((theme) => ({
 
   mlhBadgeImage: {
     width: '100%',
-  }
+  },
 }));
 
 export function ModalSimple(props: {
@@ -87,10 +87,7 @@ export function ModalSimple(props: {
   const modalItems = HeaderLinks.map((link) => (
     <Link
       key={link.label}
-      href={{
-        pathname: '/',
-        hash: `${link.link}`,
-      }}
+      href={link.link.startsWith("https://") ? link.link : { pathname: '/', hash: `${link.link}` }}
     >
       <a className={cx(classes.modalLink, { [classes.navLinkActive]: props.active === link.link })}>
         {link.label}
@@ -113,10 +110,7 @@ export function HeaderSimple() {
   const items = HeaderLinks.map((link) => (
     <Link
       key={link.label}
-      href={{
-        pathname: '/',
-        hash: `${link.link}`,
-      }}
+      href={link.link.startsWith("https://") ? link.link : { pathname: '/', hash: `${link.link}` }}
     >
       <a className={cx(classes.navLink, { [classes.navLinkActive]: active === link.link })}>
         {link.label}
@@ -143,13 +137,11 @@ export function HeaderSimple() {
           </Group>
         </div>
       </Container>
-      <Link
-        href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=red"
-      >
+      <Link href="https://mlh.io/na?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=red">
         <a className={classes.mlhBadge}>
-          <img 
-            src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-red.svg" 
-            alt="Major League Hacking 2023 Hackathon Season" 
+          <img
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2023/mlh-trust-badge-2023-red.svg"
+            alt="Major League Hacking 2023 Hackathon Season"
             className={classes.mlhBadgeImage}
           />
         </a>
