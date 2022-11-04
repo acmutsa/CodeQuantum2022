@@ -13,6 +13,10 @@ export const navLinks = [
             "label": "Tracks"
         },
         {
+            "link": "/schedule",
+            "label": "Schedule"
+        },
+        {
             "link": "/team",
             "label": 'Team',
         },

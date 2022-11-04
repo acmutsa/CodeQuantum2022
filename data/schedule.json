@@ -1,0 +1,210 @@
+[
+    {
+        "event": "Check-in",
+        "type": "",
+        "time": "9:00 AM",
+        "day": "Satuday",
+        "location": "Galleria",
+        "additionalInformation": "Your chance to check-in to the event to show that you are attending!"
+    },
+    {
+        "event": "Breakfast & Snacks",
+        "type": "food",
+        "time": "9:00 AM",
+        "day": "",
+        "location": "Galleria",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Sponsor Fair",
+        "type": "",
+        "time": "9:00 AM - 10:15 AM",
+        "day": "",
+        "location": "Galleria",
+        "additionalInformation": "Mingle with our sponsors and check out their many opportunities!"
+    },
+    {
+        "event": "Opening Ceremonies",
+        "type": "",
+        "time": "10:30 AM",
+        "day": "",
+        "location": "1st Half of Ballroom",
+        "additionalInformation": "Come hear everything about everying happening this weekend."
+    },
+    {
+        "event": "Hacking Beings",
+        "type": "",
+        "time": "12:00 PM",
+        "day": "",
+        "location": "",
+        "additionalInformation": "READY. SET. GO!"
+    },
+    {
+        "event": "Sticker Scavenger Hunt",
+        "type": "side event",
+        "time": "12:00 PM",
+        "day": "",
+        "location": "1st Half of Ballroom",
+        "additionalInformation": ""
+    },
+    {
+        "event": "CTF Beings",
+        "type": "side event",
+        "time": "12:00 PM",
+        "day": "",
+        "location": "1st Half of Ballroom",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Team Building Activity",
+        "type": "side event",
+        "time": "12:00 PM",
+        "day": "",
+        "location": "Galleria",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Lunch",
+        "type": "food",
+        "time": "1:00 PM",
+        "day": "",
+        "location": "Galleria",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Introduction to Game Development",
+        "type": "workshop",
+        "time": "2:30 PM",
+        "day": "",
+        "location": "Willow",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Embedded Security",
+        "type": "workshop",
+        "time": "2:30 PM",
+        "day": "",
+        "location": "2nd Half of Ballroom",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Intro to Machine Learning with Python",
+        "type": "workshop",
+        "time": "3:45 PM",
+        "day": "",
+        "location": "Willow",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Gender Minorities in STEM Panel",
+        "type": "workshop",
+        "time": "3:45 PM",
+        "day": "",
+        "location": "2nd Half of Ballroom",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Dinner",
+        "type": "food",
+        "time": "6:00 PM",
+        "day": "",
+        "location": "Galleria",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Intro to Cybersecurity/CTF",
+        "type": "workshop",
+        "time": "8:00 PM",
+        "day": "",
+        "location": "Ash",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Fall Themed Bingo",
+        "type": "side event",
+        "time": "9:30 PM",
+        "day": "",
+        "location": "Galleria",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Midnight Snack",
+        "type": "food",
+        "time": "12:00 AM",
+        "day": "Sunday",
+        "location": "1st Half of Ballroom",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Cup Stacking Team Activity",
+        "type": "side event",
+        "time": "12:30 AM",
+        "day": "",
+        "location": "Galleria",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Breakfast",
+        "type": "food",
+        "time": "8:00 AM",
+        "day": "",
+        "location": "Galleria",
+        "additionalInformation": ""
+    },
+    {
+        "event": "How to Submit/Pitch",
+        "type": "workshop",
+        "time": "10:00 AM",
+        "day": "",
+        "location": "1st Half of Ballroom",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Wikipedia Racing with MLH",
+        "type": "side event",
+        "time": "11:00 AM",
+        "day": "",
+        "location": "Galleria",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Lunch",
+        "type": "food",
+        "time": "12:00 PM",
+        "day": "",
+        "location": "Galleria",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Submissions Due",
+        "type": "",
+        "time": "1:30 PM",
+        "day": "",
+        "location": "",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Judging Starts",
+        "type": "",
+        "time": "2:00 PM",
+        "day": "",
+        "location": "1st Half of Ballroom",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Karaoke",
+        "type": "side event",
+        "time": "3:00 PM",
+        "day": "",
+        "location": "1st Half of Ballroom",
+        "additionalInformation": ""
+    },
+    {
+        "event": "Closing Ceremonies",
+        "type": "",
+        "time": "4:00 PM",
+        "day": "",
+        "location": "",
+        "additionalInformation": ""
+    }
+]
