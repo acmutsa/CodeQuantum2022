@@ -28,11 +28,10 @@ export const navLinks = [
             "link": "/sponsors",
             "label": 'Sponsors',
         },
-        // GUIDE a WIP
-        // {
-        //     "link": "/guide",
-        //     "label": 'Guide',
-        // },
+        {
+            "link": "https://guide.cqhacks.org",
+            "label": 'Guide',
+        },
 ];
 
 // SPONSORS

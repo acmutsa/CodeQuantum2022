@@ -87,10 +87,7 @@ export function ModalSimple(props: {
   const modalItems = HeaderLinks.map((link) => (
     <Link
       key={link.label}
-      href={{
-        pathname: '/',
-        hash: `${link.link}`,
-      }}
+      href={link.link.startsWith("https://") ? link.link : { pathname: '/', hash: `${link.link}` }}
     >
       <a className={cx(classes.modalLink, { [classes.navLinkActive]: props.active === link.link })}>
         {link.label}
@@ -113,10 +110,7 @@ export function HeaderSimple() {
   const items = HeaderLinks.map((link) => (
     <Link
       key={link.label}
-      href={{
-        pathname: '/',
-        hash: `${link.link}`,
-      }}
+      href={link.link.startsWith("https://") ? link.link : { pathname: '/', hash: `${link.link}` }}
     >
       <a className={cx(classes.navLink, { [classes.navLinkActive]: active === link.link })}>
         {link.label}
