@@ -89,16 +89,6 @@
         "menuTitle": "FreeBirds"
     },
     {
-        "event": "Introduction to Game Development",
-        "type": "workshop",
-        "time": "2:30 PM",
-        "day": "",
-        "location": "Willow",
-        "additionalInformation": "",
-        "menu": [],
-        "menuTitle": ""
-    },
-    {
         "event": "Embedded Security",
         "type": "workshop",
         "time": "2:30 PM",
@@ -109,21 +99,21 @@
         "menuTitle": ""
     },
     {
-        "event": "Intro to Machine Learning with Python",
-        "type": "workshop",
-        "time": "3:45 PM",
-        "day": "",
-        "location": "Willow",
-        "additionalInformation": "",
-        "menu": [],
-        "menuTitle": ""
-    },
-    {
         "event": "Gender Minorities in STEM Panel",
         "type": "workshop",
         "time": "3:45 PM",
         "day": "",
         "location": "2nd Half of Ballroom",
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
+    },
+    {
+        "event": "Introduction to Game Development",
+        "type": "workshop",
+        "time": "3:45 PM",
+        "day": "",
+        "location": "Willow",
         "additionalInformation": "",
         "menu": [],
         "menuTitle": ""
@@ -144,6 +134,16 @@
         "time": "8:00 PM",
         "day": "",
         "location": "Ash",
+        "additionalInformation": "",
+        "menu": [],
+        "menuTitle": ""
+    },
+    {
+        "event": "Intro to Machine Learning with Python",
+        "type": "workshop",
+        "time": "8:00 PM",
+        "day": "",
+        "location": "Willow",
         "additionalInformation": "",
         "menu": [],
         "menuTitle": ""
