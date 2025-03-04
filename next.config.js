@@ -3,12 +3,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
+  output: 'export',
   reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true, // This disables Next.js Image Optimization
+    loader: 'akamai', // Use Cloudflare-compatible loader
+    path: '/',
   },
-  
 });
