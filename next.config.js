@@ -7,4 +7,8 @@ module.exports = withBundleAnalyzer({
   eslint: {
     ignoreDuringBuilds: true,
   },
+  images: {
+    unoptimized: true, // This disables Next.js Image Optimization
+  },
+  
 });
